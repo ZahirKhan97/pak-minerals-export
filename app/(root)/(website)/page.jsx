@@ -7,7 +7,6 @@ const Home = async () => {
     const products = await getProducts();
     const minerals = products.minerals;
     const gems = products.gems;
-    console.log("Minerals:", minerals);
   return (
     <>
       <BannerCarousel />

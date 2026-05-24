@@ -21,7 +21,7 @@
     "special_note": "Large-scale reserves in Sindh",
     "seo": { "meta_title": "Pakistan Coal Resources", "meta_description": "Thermal and coking coal from Pakistan." },
     "tags": ["coal", "energy mineral"],
-    "is_featured": false,
+    "is_featured": true,
     "status": "active"
   },
    {
@@ -72,7 +72,7 @@
     "special_note": "Major export commodity",
     "seo": { "meta_title": "Pakistan Chromite Ore", "meta_description": "High-grade chromite ore from Pakistan." },
     "tags": ["chromite", "chromium ore"],
-    "is_featured": false,
+    "is_featured": true,
     "status": "active"
   },
   {
@@ -203,7 +203,11 @@
     "slug": "spinel",
     "category": "Gemstones",
     "subcategory": "Precious Gemstone",
-    "image": [],
+    "image": [
+      "https://res.cloudinary.com/dovzb6w47/image/upload/v1779610528/Spinel_3_g74dwm.jpg",
+      "https://res.cloudinary.com/dovzb6w47/image/upload/v1779610527/Spinel_pme6jd.jpg",
+      "https://res.cloudinary.com/dovzb6w47/image/upload/v1779610527/Spinel_2_mgoqmt.jpg"
+    ],
     "group": "Oxide Group",
     "origin": {
       "region": "Hunza Valley, Gilgit-Baltistan, Pakistan"
@@ -230,7 +234,11 @@
     "slug": "aquamarine",
     "category": "Gemstones",
     "subcategory": "Fine Gemstone",
-    "image": [],
+    "image": [
+      "https://res.cloudinary.com/dovzb6w47/image/upload/v1779610487/Aqua_marine_wfml4m.jpg",
+      "https://res.cloudinary.com/dovzb6w47/image/upload/v1779610485/Aqua_marine_4_wae4pv.jpg",
+      "https://res.cloudinary.com/dovzb6w47/image/upload/v1779610485/Aqua_marine_2_rzpfiq.jpg"
+    ],
     "group": "Beryl Group",
     "origin": {
       "region": "Shigar & Nagar Valley, Skardu, Gilgit-Baltistan, Pakistan"
@@ -257,7 +265,11 @@
     "slug": "pink-topaz-imperial",
     "category": "Gemstones",
     "subcategory": "Fine Gemstone",
-    "image": [],
+    "image": [
+      "https://res.cloudinary.com/dovzb6w47/image/upload/v1779610523/Pink_Topaz_hoqe7u.jpg",
+      "https://res.cloudinary.com/dovzb6w47/image/upload/v1779610521/Pink_Topaz_5_uecdjp.jpg",
+      "https://res.cloudinary.com/dovzb6w47/image/upload/v1779610517/Pink_topaz_2_rtle7l.jpg"
+    ],
     "group": "Topaz Group",
     "origin": {
       "region": "Katlang, Mardan District, Khyber Pakhtunkhwa, Pakistan"
@@ -274,7 +286,7 @@
       "meta_description": "Rare natural pink topaz from Katlang, Pakistan with unique baby-pink hues."
     },
     "tags": ["pink topaz", "imperial topaz", "katlang gemstone", "rare gemstone", "pink gemstone"],
-    "is_featured": true,
+    "is_featured": false,
     "status": "active"
   },
   {
@@ -284,7 +296,12 @@
     "slug": "golden-topaz",
     "category": "Gemstones",
     "subcategory": "Fine Gemstone",
-    "image": [],
+    "image": [
+      "https://res.cloudinary.com/dovzb6w47/image/upload/v1779610502/Golden_topaz_4_uzpfhl.jpg",
+      "https://res.cloudinary.com/dovzb6w47/image/upload/v1779610499/Golden_topaz_2_dev7pr.jpg",
+      "https://res.cloudinary.com/dovzb6w47/image/upload/v1779610499/Golden_topaz_lubjae.jpg",
+      "https://res.cloudinary.com/dovzb6w47/image/upload/v1779610499/Golden_topaz_3_ahchal.jpg"
+    ],
     "group": "Topaz Group",
     "origin": {
       "region": "Shigar & Dassu Area, Baltistan, Gilgit-Baltistan, Pakistan"
@@ -301,7 +318,7 @@
       "meta_description": "Premium golden topaz gemstones from Baltistan and Dassu regions of Pakistan."
     },
     "tags": ["golden topaz", "amber gemstone", "topaz", "pakistan gemstones"],
-    "is_featured": true,
+    "is_featured": false,
     "status": "active"
   },
   
@@ -312,7 +329,11 @@
     "slug": "peridot",
     "category": "Gemstones",
     "subcategory": "Fine Gemstone",
-    "image": [],
+    "image": [
+      "https://res.cloudinary.com/dovzb6w47/image/upload/v1779610515/Peridot_3_y0gfg7.jpg",
+      "https://res.cloudinary.com/dovzb6w47/image/upload/v1779610513/Peridot_2_lqn90g.jpg",
+      "https://res.cloudinary.com/dovzb6w47/image/upload/v1779610515/Peridot_s7ulyz.jpg"
+    ],
     "group": "Olivine Group",
     "origin": {
       "region": "Kohistan & Mansehra, Khyber Pakhtunkhwa, Pakistan"
@@ -329,7 +350,7 @@
       "meta_description": "High-quality green peridot gemstones from Kohistan and Mansehra, Pakistan."
     },
     "tags": ["peridot", "green gemstone", "olivine", "kohistan gemstones"],
-    "is_featured": true,
+    "is_featured": false,
     "status": "active"
   },
   {
@@ -339,7 +360,11 @@
     "slug": "amethyst",
     "category": "Gemstones",
     "subcategory": "Fine Gemstone",
-    "image": [],
+    "image": [
+      "https://res.cloudinary.com/dovzb6w47/image/upload/v1779610484/Amethyst_3_nimegu.jpg",
+      "https://res.cloudinary.com/dovzb6w47/image/upload/v1779610483/Amethyst_2_ine37l.jpg",
+      "https://res.cloudinary.com/dovzb6w47/image/upload/v1779610484/Amethyst_b0l9qz.jpg"
+    ],
     "group": "Quartz Group",
     "origin": {
       "region": "Baltistan Region, Gilgit-Baltistan, Pakistan"
@@ -453,7 +478,12 @@
     "slug": "morganite",
     "category": "Gemstones",
     "subcategory": "Fine Gemstone",
-    "image": [],
+    "image": [
+      "https://res.cloudinary.com/dovzb6w47/image/upload/v1779610503/Morganite_2_waxk1q.jpg",
+      "https://res.cloudinary.com/dovzb6w47/image/upload/v1779610513/Morganite_3_evv3kp.jpg",
+      "https://res.cloudinary.com/dovzb6w47/image/upload/v1779610518/Morganite_jmel56.jpg",
+      "https://res.cloudinary.com/dovzb6w47/image/upload/v1779610519/Morganite_4_jvirmi.jpg"
+    ],
     "group": "Beryl Group",
     "origin": {
       "region": "Shigar & Stak Nala, Baltistan, Gilgit-Baltistan, Pakistan"
@@ -480,7 +510,14 @@
     "slug": "lapis-lazuli",
     "category": "Gemstones",
     "subcategory": "Ornamental Stone",
-    "image": [],
+    "image": [
+      "https://res.cloudinary.com/dovzb6w47/image/upload/v1779610502/Lapis_Lazuli_uzm0js.jpg",
+      "https://res.cloudinary.com/dovzb6w47/image/upload/v1779610501/Lapis_lazuli_2_a2vztf.jpg",
+      "https://res.cloudinary.com/dovzb6w47/image/upload/v1779610500/K2_Jasper_zkzvmy.jpg",
+      "https://res.cloudinary.com/dovzb6w47/image/upload/v1779610499/K2_Jasper_4_ywaagh.jpg",
+      "https://res.cloudinary.com/dovzb6w47/image/upload/v1779610499/K2_Jasper_5_aiwywk.jpg",
+      "https://res.cloudinary.com/dovzb6w47/image/upload/v1779610499/K2_Jasper_3_l7qrgw.jpg"
+    ],
     "group": "Lazurite Group",
     "origin": {
       "region": "Badakhshan via Pakistan; Chitral, KPK, Pakistan"
@@ -497,7 +534,7 @@
       "meta_description": "Premium royal blue lapis lazuli stones and carvings."
     },
     "tags": ["lapis lazuli", "blue stone", "ornamental stone"],
-    "is_featured": true,
+    "is_featured": false,
     "status": "active"
   },
   {
@@ -524,7 +561,7 @@
       "meta_description": "Rare K2 Jasper ornamental stone from Gilgit-Baltistan."
     },
     "tags": ["k2 jasper", "azurite granite", "collector stone"],
-    "is_featured": true,
+    "is_featured": false,
     "status": "active"
   },
   {
@@ -778,7 +815,7 @@
     "special_note": "Bulk export available",
     "seo": { "meta_title": "Pakistan Industrial Rock Salt", "meta_description": "Industrial rock salt exports from Pakistan." },
     "tags": ["rock salt", "industrial salt"],
-    "is_featured": false,
+    "is_featured": true,
     "status": "active"
   },
   
@@ -803,7 +840,7 @@
     "special_note": "Chiniot reserves exceed 500 million tonnes",
     "seo": { "meta_title": "Pakistan Iron Ore", "meta_description": "Iron ore resources and exports from Pakistan." },
     "tags": ["iron ore", "hematite", "magnetite"],
-    "is_featured": true,
+    "is_featured": false,
     "status": "active"
   },
   {
@@ -825,7 +862,7 @@
     "special_note": "Reko Diq contains 40M+ oz gold",
     "seo": { "meta_title": "Pakistan Gold & Silver", "meta_description": "Gold and silver mining resources from Pakistan." },
     "tags": ["gold", "silver", "precious metal"],
-    "is_featured": true,
+    "is_featured": false,
     "status": "active"
   },
   {
@@ -941,7 +978,7 @@
     "special_note": "Low iron content suitable for fiberglass",
     "seo": { "meta_title": "Pakistan Silica Sand", "meta_description": "Industrial silica and quartz sand exports from Pakistan." },
     "tags": ["silica sand", "quartz sand"],
-    "is_featured": true,
+    "is_featured": false,
     "status": "active"
   },
   {
@@ -1009,7 +1046,7 @@
     "special_note": "CaCO3 purity 90-97%",
     "seo": { "meta_title": "Pakistan Limestone & Dolomite", "meta_description": "Industrial limestone and dolomite exports from Pakistan." },
     "tags": ["limestone", "dolomite"],
-    "is_featured": true,
+    "is_featured": false,
     "status": "active"
   },
   {
