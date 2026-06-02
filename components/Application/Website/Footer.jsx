@@ -1,4 +1,4 @@
-import { WEBSITE_HOME } from '@/routes/WebsiteRoute';
+import { WEBSITE_CATEGORY, WEBSITE_HOME } from '@/routes/WebsiteRoute';
 import Link from 'next/link';
 import React from 'react'
 import { FaWhatsapp } from "react-icons/fa";
@@ -50,7 +50,7 @@ const Footer = async () => {
                 categories.map((category) => (
                   <li key={category._id}>
                     <Link
-                      href={`${category.slug}`}
+                      href={WEBSITE_CATEGORY(category.slug)}
                       className="hover:text-green-300 transition"
                     >
                       {category.name}

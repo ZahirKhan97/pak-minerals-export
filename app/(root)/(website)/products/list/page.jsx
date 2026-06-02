@@ -1,60 +1,129 @@
 'use client';
 
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useState } from "react";
 import ProductCard from "@/components/Application/Website/ProductCard";
-import productsData from "@/app/data/products.json";
-
-const products = productsData || [];
+import { getCategories } from "@/lib/categories";
+import { useRouter, useSearchParams } from "next/navigation";
+import Link from "next/link";
+import { WEBSITE_LISTING } from "@/routes/WebsiteRoute";
 
 const ProductsListPage = () => {
+
+  const [products, setProducts] = useState([]);
+  const [categories, setCategories] = useState([]);
+  const [subcategories, setSubcategories] = useState([]);
 
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [selectedSubcategory, setSelectedSubcategory] = useState("All");
   const [sortBy, setSortBy] = useState("all");
 
-  // Categories
-  const categories = [
-    "All",
-    ...new Set(products.map((item) => item.category)),
-  ];
+  const [loading, setLoading] = useState(true);
 
-  // Subcategories
-  const subcategories = [
-    "All",
-    ...new Set(products.map((item) => item.subcategory)),
-  ];
+  const getProducts = async () => {
+    try {
+      setLoading(true);
 
-  // Filtered Products
-  const filteredProducts = useMemo(() => {
+      const params = new URLSearchParams();
 
-    let filtered = [...products];
+      if (selectedCategory !== "All") {
+        params.append("category", selectedCategory);
+      }
 
-    // Category Filter
-    if (selectedCategory !== "All") {
-      filtered = filtered.filter(
-        (item) => item.category === selectedCategory
+      if (selectedSubcategory !== "All") {
+        params.append("subcategory", selectedSubcategory);
+      }
+
+      if (sortBy !== "all") {
+        params.append("sort", sortBy);
+      }
+
+      const response = await fetch(
+        `/api/products/list?${params.toString()}`
       );
+
+      const data = await response.json();
+      setProducts(data.products || []);
+    } catch (error) {
+      console.error(error);
+    } finally {
+      setLoading(false);
     }
+  };
 
-    // Subcategory Filter
-    if (selectedSubcategory !== "All") {
-      filtered = filtered.filter(
-        (item) => item.subcategory === selectedSubcategory
-      );
-    }
+ const getFilters = async () => {
+  try {
+    const data = await getCategories();
+    setCategories(data.categoriesData || []);
+    setSubcategories(data.subcategoriesData || []);
+  } catch (error) {
+    console.error(error);
+  }
+};
 
-    // Sorting
-    if (sortBy === "ascending") {
-      filtered.sort((a, b) => a.name.localeCompare(b.name));
-    }
+  useEffect(() => {
+    getFilters();
+  }, []);
 
-    if (sortBy === "descending") {
-      filtered.sort((a, b) => b.name.localeCompare(a.name));
-    }
+  useEffect(() => {
+    getProducts();
+  }, [
+    selectedCategory,
+    selectedSubcategory,
+    sortBy,
+  ]);
 
-    return filtered;
+  const router = useRouter();
+  const searchParams = useSearchParams();
 
-  }, [selectedCategory, selectedSubcategory, sortBy]);
+  useEffect(() => {
+    const category = searchParams.get("category") || "All";
+    const subcategory = searchParams.get("subcategory") || "All";
+    const sort = searchParams.get("sort") || "all";
+
+    setSelectedCategory(category);
+    setSelectedSubcategory(subcategory);
+    setSortBy(sort);
+  }, [searchParams]);
+
+  const handleCategorySelect = (category) => {
+    const params = new URLSearchParams(searchParams.toString());
+
+    params.set("category", category.name);
+    params.delete("subcategory");
+
+    router.push(`?${params.toString()}`);
+
+    setSelectedCategory(category.name);
+    setSelectedSubcategory("All");
+  };
+
+  const handleSubcategorySelect = (subcategory) => {
+    const params = new URLSearchParams(searchParams.toString());
+
+    params.set("subcategory", subcategory.name);
+
+    router.push(`?${params.toString()}`);
+
+    setSelectedSubcategory(subcategory.name);
+  };
+
+  const handleSortChange = (value) => {
+    const params = new URLSearchParams(searchParams.toString());
+
+    params.set("sort", value);
+
+    router.push(`?${params.toString()}`);
+
+    setSortBy(value);
+  };
+
+  const clearAllFilters = () => {
+    router.push(WEBSITE_LISTING); // clean URL
+
+    setSelectedCategory("All");
+    setSelectedSubcategory("All");
+    setSortBy("all");
+  };
 
   return (
     <section className="min-h-screen pt-20">
@@ -98,18 +167,24 @@ const ProductsListPage = () => {
                 </h3>
 
                 <div className="flex flex-col gap-3">
+                  <button
+                    onClick={clearAllFilters}
+                    className="px-5 py-2 rounded-xl border border-red-300 text-red-600 hover:bg-red-50 transition cursor-pointer"
+                  >
+                    Clear All
+                  </button>
 
                   {categories.map((category, index) => (
                     <button
-                      key={index}
-                      onClick={() => setSelectedCategory(category)}
+                      key={category._id}
+                      onClick={() => handleCategorySelect(category)}
                       className={`text-left px-4 py-3 rounded-xl border transition cursor-pointer ${
-                        selectedCategory === category
+                        selectedCategory === category.name
                           ? "bg-green-700 text-white border-green-700"
                           : "bg-white border-gray-200 hover:border-green-500"
                       }`}
                     >
-                      {category}
+                      {category.name}
                     </button>
                   ))}
 
@@ -124,18 +199,17 @@ const ProductsListPage = () => {
                 </h3>
 
                 <div className="flex flex-col gap-3">
-
                   {subcategories.map((subcategory, index) => (
                     <button
-                      key={index}
-                      onClick={() => setSelectedSubcategory(subcategory)}
+                      key={subcategory._id}
+                      onClick={() => handleSubcategorySelect(subcategory)}
                       className={`text-left px-4 py-3 rounded-xl border transition cursor-pointer ${
-                        selectedSubcategory === subcategory
+                        selectedSubcategory === subcategory.name
                           ? "bg-green-700 text-white border-green-700"
                           : "bg-white border-gray-200 hover:border-green-500"
                       }`}
                     >
-                      {subcategory}
+                      {subcategory.name}
                     </button>
                   ))}
 
@@ -153,14 +227,14 @@ const ProductsListPage = () => {
 
               <div>
                 <h3 className="text-lg font-semibold text-gray-800">
-                  Showing {filteredProducts.length} Products
+                  Showing {products.length} Products
                 </h3>
               </div>
 
               <div className="flex flex-wrap gap-3">
 
                 <button
-                  onClick={() => setSortBy("all")}
+                  onClick={() => handleSortChange("all")}
                   className={`px-5 py-2 rounded-xl border transition cursor-pointer ${
                     sortBy === "all"
                       ? "bg-green-700 text-white border-green-700"
@@ -171,7 +245,7 @@ const ProductsListPage = () => {
                 </button>
 
                 <button
-                  onClick={() => setSortBy("ascending")}
+                  onClick={() => handleSortChange("ascending")}
                   className={`px-5 py-2 rounded-xl border transition cursor-pointer ${
                     sortBy === "ascending"
                       ? "bg-green-700 text-white border-green-700"
@@ -182,7 +256,7 @@ const ProductsListPage = () => {
                 </button>
 
                 <button
-                  onClick={() => setSortBy("descending")}
+                  onClick={() => handleSortChange("descending")}
                   className={`px-5 py-2 rounded-xl border transition cursor-pointer ${
                     sortBy === "descending"
                       ? "bg-green-700 text-white border-green-700"
@@ -197,11 +271,11 @@ const ProductsListPage = () => {
             </div>
 
             {/* Products Grid */}
-            {filteredProducts.length > 0 ? (
+            {products.length > 0 ? (
 
               <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
 
-                {filteredProducts.map((product) => (
+                {products.map((product) => (
                   <ProductCard
                     key={product.id}
                     product={product}

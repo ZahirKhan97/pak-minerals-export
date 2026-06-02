@@ -1,4 +1,4 @@
-import { WEBSITE_HOME } from "@/routes/WebsiteRoute";
+import { WEBSITE_CATEGORY, WEBSITE_HOME } from "@/routes/WebsiteRoute";
 import Link from "next/link";
 import { getCategories } from '@/lib/categories'
 
@@ -25,8 +25,8 @@ const Header = async () => {
             {
               categories.map((category) => (
               <Link
-              key={category._id}
-                href={`${category.slug}`}
+                key={category._id}
+                href={WEBSITE_CATEGORY(category.slug)}
                 className="text-white hover:text-green-200 transition"
               >
                 {category.name}
@@ -61,7 +61,7 @@ const Header = async () => {
                 categories.map((category) => (
                 <Link
                 key={category._id}
-                  href={`${category.slug}`}
+                  href={WEBSITE_CATEGORY(category.slug)}
                   className="text-white hover:text-green-200 transition"
                 >
                   {category.name}
