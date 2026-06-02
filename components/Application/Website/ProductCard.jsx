@@ -5,7 +5,6 @@ import Link from "next/link";
 
 export default function ProductCard({ product }) {
   const imageSrc = Array.isArray(product.image) && product.image.length > 0 ? product.image[0] : placeholder;
-  console.log(product);
   return (
     <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition group">
 

@@ -16,8 +16,6 @@ const ProductGallery = ({product}) => {
 
   const [selectedImage, setSelectedImage] = useState(galleryImages[0]);
 
-  console.log(product)
-
   return (
     <>
       <div className="relative">

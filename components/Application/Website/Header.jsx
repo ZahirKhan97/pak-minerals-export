@@ -1,7 +1,12 @@
 import { WEBSITE_HOME } from "@/routes/WebsiteRoute";
 import Link from "next/link";
+import { getCategories } from '@/lib/categories'
 
-const Header = () => {
+
+const Header = async () => {
+  const categoriesData = await getCategories();
+  const categories = categoriesData?.categoriesData || [];
+
   return (
     <header className="sticky top-0 z-50 bg-green-700 shadow-md">
       <div className="max-w-7xl mx-auto px-4">
@@ -17,19 +22,17 @@ const Header = () => {
 
           {/* Desktop Menu */}
           <nav className="hidden md:flex items-center gap-6 lg:gap-8">
-            <Link
-              href="#minerals"
-              className="text-white hover:text-green-200 transition"
-            >
-              Minerals
-            </Link>
-
-            <Link
-              href="#gems"
-              className="text-white hover:text-green-200 transition"
-            >
-              Gems
-            </Link>
+            {
+              categories.map((category) => (
+              <Link
+              key={category._id}
+                href={`${category.slug}`}
+                className="text-white hover:text-green-200 transition"
+              >
+                {category.name}
+              </Link>
+              ))
+            }
 
             <Link
               href="#contact"
@@ -54,19 +57,17 @@ const Header = () => {
 
             <div className="absolute right-0 mt-4 w-52 bg-green-800 border border-green-600 rounded-lg shadow-lg p-4 flex flex-col gap-4">
               
-              <Link
-                href="#minerals"
-                className="text-white hover:text-green-200 transition"
-              >
-                Minerals
-              </Link>
-
-              <Link
-                href="#gems"
-                className="text-white hover:text-green-200 transition"
-              >
-                Gems
-              </Link>
+              {
+                categories.map((category) => (
+                <Link
+                key={category._id}
+                  href={`${category.slug}`}
+                  className="text-white hover:text-green-200 transition"
+                >
+                  {category.name}
+                </Link>
+                ))
+              }
 
               <Link
                 href="#contact"

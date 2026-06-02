@@ -3,10 +3,13 @@ import Link from 'next/link';
 import React from 'react'
 import { FaWhatsapp } from "react-icons/fa";
 import { IoLocationOutline, IoMailOutline } from "react-icons/io5";
+import { getCategories } from '@/lib/categories'
 
 
+const Footer = async () => {
+  const categoriesData = await getCategories();
+  const categories = categoriesData?.categoriesData || [];
 
-const Footer = () => {
   return (
     <footer className="bg-green-900 text-white mt-20">
       
@@ -43,23 +46,18 @@ const Footer = () => {
                 </Link>
               </li>
 
-              <li>
-                <Link
-                  href="#minerals"
-                  className="hover:text-green-300 transition"
-                >
-                  Minerals
-                </Link>
-              </li>
-
-              <li>
-                <Link
-                  href="#gems"
-                  className="hover:text-green-300 transition"
-                >
-                  Gems
-                </Link>
-              </li>
+              {
+                categories.map((category) => (
+                  <li key={category._id}>
+                    <Link
+                      href={`${category.slug}`}
+                      className="hover:text-green-300 transition"
+                    >
+                      {category.name}
+                    </Link>
+                  </li>
+                ))
+              }
 
               <li>
                 <Link

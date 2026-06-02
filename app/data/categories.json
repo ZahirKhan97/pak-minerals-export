@@ -1,0 +1,30 @@
+[
+  {
+    "_id": 1,
+    "name": "Gemstones",
+    "slug": "gemstones",
+    "icon": "gemstone.png",
+    "description": "Natural gemstones and collector minerals from Pakistan.",
+    "seo": {
+      "meta_title": "Pakistan Gemstones",
+      "meta_description": "Precious, semi-precious and collector gemstones from Pakistan."
+    },
+    "is_featured": true,
+    "sort_order": 1,
+    "status": "active"
+  },
+  {
+    "_id": 2,
+    "name": "Minerals",
+    "slug": "minerals",
+    "icon": "minerals.png",
+    "description": "Industrial, metallic and non-metallic minerals from Pakistan.",
+    "seo": {
+      "meta_title": "Pakistan Minerals",
+      "meta_description": "Industrial and export-grade minerals from Pakistan."
+    },
+    "is_featured": true,
+    "sort_order": 2,
+    "status": "active"
+  }
+]
