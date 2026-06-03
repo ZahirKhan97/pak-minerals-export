@@ -20,7 +20,7 @@ const ProductGallery = ({product}) => {
     <>
       <div className="relative">
         {/* Main Image */}
-        <div className="bg-white rounded-2xl shadow-md border border-gray-100 overflow-hidden">
+        <div className="bg-white rounded-lg shadow-md border border-gray-100 overflow-hidden">
           <div className="relative w-full h-[300px] sm:h-[450px] lg:h-[500px]">
             <Image
               src={selectedImage}
@@ -39,7 +39,7 @@ const ProductGallery = ({product}) => {
             <button
               key={index}
               onClick={() => setSelectedImage(image)}
-              className={`relative min-w-[70px] w-[70px] h-[70px] rounded-xl overflow-hidden border-2 bg-white shadow-md transition cursor-pointer ${
+              className={`relative min-w-[70px] w-[70px] h-[70px] rounded-lg overflow-hidden border-2 bg-white shadow-md transition cursor-pointer ${
                 selectedImage === image
                   ? "border-green-700"
                   : "border-white"
@@ -57,8 +57,8 @@ const ProductGallery = ({product}) => {
         </div>
         <div>
          {/* Info Cards */}
-          <div className='grid grid-cols-1 sm:grid-cols-2 gap-4 mt-5 w-full'>
-            <div className="bg-white p-5 rounded-2xl shadow-sm border border-gray-100">
+          <div className='grid grid-cols-1 sm:grid-cols-2 gap-4 mt-3 w-full'>
+            <div className="bg-white p-5 rounded-sm shadow-sm border border-gray-100">
               <div className="flex items-center gap-2 mb-2">
                 <FaGlobeAsia className="text-green-700 text-xl" />
                 <h3 className="font-semibold text-gray-800">
@@ -71,7 +71,7 @@ const ProductGallery = ({product}) => {
               </p>
             </div>
 
-            <div className="bg-white p-5 rounded-2xl shadow-sm border border-gray-100">
+            <div className="bg-white p-5 rounded-sm shadow-sm border border-gray-100">
               <div className="flex items-center gap-2 mb-2">
                 <FaBoxes className="text-green-700 text-xl" />
                 <h3 className="font-semibold text-gray-800">
