@@ -1,13 +1,19 @@
-'use client';
+"use client";
 
 import { useEffect, useState } from "react";
 import ProductCard from "@/components/Application/Website/ProductCard";
 import { getCategories } from "@/lib/categories";
 import { useRouter, useSearchParams } from "next/navigation";
 import { WEBSITE_LISTING } from "@/routes/WebsiteRoute";
+import { FaAngleDown } from "react-icons/fa6";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 const ProductsListClient = () => {
-
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]);
   const [subcategories, setSubcategories] = useState([]);
@@ -16,8 +22,15 @@ const ProductsListClient = () => {
   const [selectedSubcategory, setSelectedSubcategory] = useState("All");
   const [sortBy, setSortBy] = useState("all");
 
+  const [isFilterOpen, setIsFilterOpen] = useState(false);
+  const [isSortOpen, setIsSortOpen] = useState(false);
+
   const [loading, setLoading] = useState(true);
 
+  const router = useRouter();
+  const searchParams = useSearchParams();
+
+  // ================= GET PRODUCTS =================
   const getProducts = async () => {
     try {
       setLoading(true);
@@ -36,11 +49,9 @@ const ProductsListClient = () => {
         params.append("sort", sortBy);
       }
 
-      const response = await fetch(
-        `/api/products/list?${params.toString()}`
-      );
-
+      const response = await fetch(`/api/products/list?${params.toString()}`);
       const data = await response.json();
+
       setProducts(data.products || []);
     } catch (error) {
       console.error(error);
@@ -49,15 +60,16 @@ const ProductsListClient = () => {
     }
   };
 
- const getFilters = async () => {
-  try {
-    const data = await getCategories();
-    setCategories(data.categoriesData || []);
-    setSubcategories(data.subcategoriesData || []);
-  } catch (error) {
-    console.error(error);
-  }
-};
+  // ================= GET FILTERS =================
+  const getFilters = async () => {
+    try {
+      const data = await getCategories();
+      setCategories(data.categoriesData || []);
+      setSubcategories(data.subcategoriesData || []);
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
   useEffect(() => {
     getFilters();
@@ -65,15 +77,9 @@ const ProductsListClient = () => {
 
   useEffect(() => {
     getProducts();
-  }, [
-    selectedCategory,
-    selectedSubcategory,
-    sortBy,
-  ]);
+  }, [selectedCategory, selectedSubcategory, sortBy]);
 
-  const router = useRouter();
-  const searchParams = useSearchParams();
-
+  // ================= URL INIT =================
   useEffect(() => {
     const category = searchParams.get("category") || "All";
     const subcategory = searchParams.get("subcategory") || "All";
@@ -84,6 +90,7 @@ const ProductsListClient = () => {
     setSortBy(sort);
   }, [searchParams]);
 
+  // ================= HANDLERS =================
   const handleCategorySelect = (category) => {
     const params = new URLSearchParams(searchParams.toString());
 
@@ -94,6 +101,7 @@ const ProductsListClient = () => {
 
     setSelectedCategory(category.name);
     setSelectedSubcategory("All");
+    setIsFilterOpen(false);
   };
 
   const handleSubcategorySelect = (subcategory) => {
@@ -104,6 +112,7 @@ const ProductsListClient = () => {
     router.push(`?${params.toString()}`);
 
     setSelectedSubcategory(subcategory.name);
+    setIsFilterOpen(false);
   };
 
   const handleSortChange = (value) => {
@@ -114,23 +123,23 @@ const ProductsListClient = () => {
     router.push(`?${params.toString()}`);
 
     setSortBy(value);
+    setIsSortOpen(false);
   };
 
   const clearAllFilters = () => {
-    router.push(WEBSITE_LISTING); // clean URL
+    router.push(WEBSITE_LISTING);
 
     setSelectedCategory("All");
     setSelectedSubcategory("All");
     setSortBy("all");
+    setIsFilterOpen(false);
   };
 
   return (
-    <section className="min-h-screen pt-20">
+    <section className="min-h-screen lg:pt-8 pt-6">
       <div className="max-w-7xl mx-auto px-4">
-
-        {/* Header */}
+        {/* HEADER */}
         <div className="mb-10">
-
           <span className="text-green-700 font-semibold uppercase tracking-wider">
             Products
           </span>
@@ -140,169 +149,217 @@ const ProductsListClient = () => {
           </h1>
 
           <p className="text-gray-600 mt-4 max-w-2xl">
-            Browse export-quality minerals, salts, and industrial products
-            sourced directly from Pakistan.
+            Browse export-quality minerals, salts, and industrial products.
           </p>
-
         </div>
 
-        {/* Layout */}
+        {/* ================= LAYOUT ================= */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-4">
-
-          {/* SIDEBAR */}
-          <div className="lg:col-span-3">
-
-            <div className="bg-white rounded-3xl border border-gray-100 shadow-sm p-6 sticky top-24">
-
-              <h2 className="text-xl font-bold text-gray-800 mb-6">
+          {/* ================= FILTERS ================= */}
+          <div className="lg:col-span-3 rounded-lg">
+            {/* MOBILE FILTER BUTTON */}
+            <div className=" lg:hidden mb-4 flex justify-between gap-2">
+              <button
+                onClick={() => setIsFilterOpen(true)}
+                className="px-4 py-1 bg-green-700 text-white rounded-lg"
+              >
                 Filters
-              </h2>
-
-              {/* Categories */}
-              <div className="mb-8">
-
-                <h3 className="font-semibold text-gray-800 mb-4">
-                  Categories
-                </h3>
-
-                <div className="flex flex-col gap-3">
-                  <button
+              </button>
+              <button
                     onClick={clearAllFilters}
-                    className="px-5 py-2 rounded-xl border border-red-300 text-red-600 hover:bg-red-50 transition cursor-pointer"
-                  >
-                    Clear All
-                  </button>
-
-                  {categories.map((category, index) => (
-                    <button
-                      key={category._id}
-                      onClick={() => handleCategorySelect(category)}
-                      className={`text-left px-4 py-3 rounded-xl border transition cursor-pointer ${
-                        selectedCategory === category.name
-                          ? "bg-green-700 text-white border-green-700"
-                          : "bg-white border-gray-200 hover:border-green-500"
-                      }`}
-                    >
-                      {category.name}
-                    </button>
-                  ))}
-
-                </div>
-              </div>
-
-              {/* Subcategories */}
-              <div>
-
-                <h3 className="font-semibold text-gray-800 mb-4">
-                  Subcategories
-                </h3>
-
-                <div className="flex flex-col gap-3">
-                  {subcategories.map((subcategory, index) => (
-                    <button
-                      key={subcategory._id}
-                      onClick={() => handleSubcategorySelect(subcategory)}
-                      className={`text-left px-4 py-3 rounded-xl border transition cursor-pointer ${
-                        selectedSubcategory === subcategory.name
-                          ? "bg-green-700 text-white border-green-700"
-                          : "bg-white border-gray-200 hover:border-green-500"
-                      }`}
-                    >
-                      {subcategory.name}
-                    </button>
-                  ))}
-
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-          {/* PRODUCTS SECTION */}
-          <div className="lg:col-span-9">
-
-            {/* Top Filter Bar */}
-            <div className="bg-white rounded-3xl border border-gray-100 shadow-sm p-4 mb-8 flex flex-col md:flex-row gap-4 md:items-center md:justify-between">
-
-              <div>
-                <h3 className="text-lg font-semibold text-gray-800">
-                  Showing {products.length} Products
-                </h3>
-              </div>
-
-              <div className="flex flex-wrap gap-3">
-
-                <button
-                  onClick={() => handleSortChange("all")}
-                  className={`px-5 py-2 rounded-xl border transition cursor-pointer ${
-                    sortBy === "all"
-                      ? "bg-green-700 text-white border-green-700"
-                      : "bg-white border-gray-200"
-                  }`}
+                    className="px-4 border border-red-300 text-red-600 rounded-lg"
                 >
-                  All
+                    Clear All Filters
                 </button>
-
-                <button
-                  onClick={() => handleSortChange("ascending")}
-                  className={`px-5 py-2 rounded-xl border transition cursor-pointer ${
-                    sortBy === "ascending"
-                      ? "bg-green-700 text-white border-green-700"
-                      : "bg-white border-gray-200"
-                  }`}
-                >
-                  Ascending
-                </button>
-
-                <button
-                  onClick={() => handleSortChange("descending")}
-                  className={`px-5 py-2 rounded-xl border transition cursor-pointer ${
-                    sortBy === "descending"
-                      ? "bg-green-700 text-white border-green-700"
-                      : "bg-white border-gray-200"
-                  }`}
-                >
-                  Descending
-                </button>
-
-              </div>
-
             </div>
 
-            {/* Products Grid */}
-            {products.length > 0 ? (
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
-
-                {products.map((product) => (
-                  <ProductCard
-                    key={product.id}
-                    product={product}
-                  />
-                ))}
-
-              </div>
-
-            ) : (
-
-              <div className="bg-white rounded-3xl border border-gray-100 p-10 text-center">
-
-                <h3 className="text-2xl font-bold text-gray-800 mb-2">
-                  No Products Found
-                </h3>
-
-                <p className="text-gray-600">
-                  Try changing the filters.
-                </p>
-
-              </div>
-
+            {/* OVERLAY */}
+            {isFilterOpen && (
+              <div
+                onClick={() => setIsFilterOpen(false)}
+                className="fixed inset-0 bg-black/40 z-40 lg:hidden"
+              />
             )}
 
+            {/* DRAWER / SIDEBAR */}
+            <div
+              className={`
+                fixed lg:static top-0 left-0 h-full bg-white z-50 ml-auto px-5 py-2 overflow-y-auto
+                transform transition-transform duration-300
+                lg:translate-x-0
+                ${isFilterOpen ? "translate-x-0" : "-translate-x-full"}
+              `}
+            >
+              {/* CLOSE */}
+              <div className="flex justify-between items-center mb-1 lg:hidden">
+                <h2 className="text-xl font-bold">Filters</h2>
+                <button onClick={() => setIsFilterOpen(false)}>✕</button>
+              </div>
+
+              <div className="flex items-center justify-between mb-6">
+                <h2 className="text-xl font-bold hidden lg:block">
+                    Filters
+                </h2>
+
+                {/* CLEAR */}
+                <button
+                    onClick={clearAllFilters}
+                    className="px-4 border border-red-300 text-red-600 rounded-lg cursor-pointer lg:block hidden"
+                >
+                    Clear All Filters
+                </button>
+              </div>
+
+
+              {/* CATEGORIES */}
+              <div className="mb-6">
+                <h3 className="font-semibold mb-3">Categories</h3>
+
+                <div className="flex flex-col gap-2">
+                  {categories.map((c) => (
+                    <button
+                      key={c._id}
+                      onClick={() => handleCategorySelect(c)}
+                      className={`text-left px-3 rounded-lg py-1 border cursor-pointer ${
+                        selectedCategory === c.name
+                          ? "bg-green-700 text-white"
+                          : "bg-white"
+                      }`}
+                    >
+                      {c.name}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              {/* SUBCATEGORIES */}
+              <div>
+                <h3 className="font-semibold mb-3">Subcategories</h3>
+
+                <div className="flex flex-col gap-2">
+                  {subcategories.map((s) => (
+                    <button
+                      key={s._id}
+                      onClick={() => handleSubcategorySelect(s)}
+                      className={`text-left px-3 rounded-lg py-1 border cursor-pointer ${
+                        selectedSubcategory === s.name
+                          ? "bg-green-700 text-white"
+                          : "bg-white"
+                      }`}
+                    >
+                      {s.name}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
 
-        </div>
+          {/* ================= PRODUCTS ================= */}
+          <div className="lg:col-span-9">
+            {/* TOP BAR */}
+            <div className="bg-white rounded-lg border lg:px-4 px-2 py-1 mb-8 flex justify-between items-center">
+              <h3 className="font-semibold">
+                Showing {products.length} Products
+              </h3>
 
+              {/* DESKTOP SORT */}
+              <div className="hidden lg:flex gap-2">
+                <DropdownMenu>
+                  <DropdownMenuTrigger asChild>
+                    <button className="px-4 py-1 rounded-lg border bg-white flex items-center gap-0">
+                      Sort: {sortBy}
+                      <FaAngleDown />
+                    </button>
+                  </DropdownMenuTrigger>
+
+                  <DropdownMenuContent align="end" className="w-44">
+                    <DropdownMenuItem
+                      onClick={() => handleSortChange("all")}
+                      className={
+                        sortBy === "all" ? "bg-green-700 text-white" : ""
+                      }
+                    >
+                      All
+                    </DropdownMenuItem>
+
+                    <DropdownMenuItem
+                      onClick={() => handleSortChange("ascending")}
+                      className={
+                        sortBy === "ascending" ? "bg-green-700 text-white" : ""
+                      }
+                    >
+                      Ascending
+                    </DropdownMenuItem>
+
+                    <DropdownMenuItem
+                      onClick={() => handleSortChange("descending")}
+                      className={
+                        sortBy === "descending" ? "bg-green-700 text-white" : ""
+                      }
+                    >
+                      Descending
+                    </DropdownMenuItem>
+                  </DropdownMenuContent>
+                </DropdownMenu>
+              </div>
+
+              {/* MOBILE SORT */}
+              <div className="lg:hidden relative">
+                <DropdownMenu>
+                  <DropdownMenuTrigger asChild>
+                    <button className="px-4 py-1 rounded-lg border bg-white flex items-center gap-2">
+                      Sort: {sortBy}
+                      <FaAngleDown />
+                    </button>
+                  </DropdownMenuTrigger>
+
+                  <DropdownMenuContent align="end" className="w-44">
+                    <DropdownMenuItem
+                      onClick={() => handleSortChange("all")}
+                      className={
+                        sortBy === "all" ? "bg-green-700 text-white" : ""
+                      }
+                    >
+                      All
+                    </DropdownMenuItem>
+
+                    <DropdownMenuItem
+                      onClick={() => handleSortChange("ascending")}
+                      className={
+                        sortBy === "ascending" ? "bg-green-700 text-white" : ""
+                      }
+                    >
+                      Ascending
+                    </DropdownMenuItem>
+
+                    <DropdownMenuItem
+                      onClick={() => handleSortChange("descending")}
+                      className={
+                        sortBy === "descending" ? "bg-green-700 text-white" : ""
+                      }
+                    >
+                      Descending
+                    </DropdownMenuItem>
+                  </DropdownMenuContent>
+                </DropdownMenu>
+              </div>
+            </div>
+
+            {/* PRODUCTS GRID */}
+            {products.length > 0 ? (
+              <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
+                {products.map((p) => (
+                  <ProductCard key={p.id} product={p} />
+                ))}
+              </div>
+            ) : (
+              <div className="p-10 text-center bg-white rounded-3xl border">
+                No Products Found
+              </div>
+            )}
+          </div>
+        </div>
       </div>
     </section>
   );
