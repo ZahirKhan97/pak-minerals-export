@@ -1,4 +1,4 @@
-import { WEBSITE_CATEGORY, WEBSITE_HOME } from '@/routes/WebsiteRoute';
+import { WEBSITE_CATEGORY, WEBSITE_HOME, WEBSITE_PRIVACY_POLICY, WEBSITE_TERMS_AND_CONDITIONS } from '@/routes/WebsiteRoute';
 import Link from 'next/link';
 import React from 'react'
 import { FaWhatsapp } from "react-icons/fa";
@@ -106,14 +106,14 @@ const Footer = async () => {
 
           <div className="flex items-center gap-5 text-sm">
             <Link
-              href="/privacy-policy"
+              href={WEBSITE_PRIVACY_POLICY}
               className="hover:text-green-300 transition"
             >
               Privacy Policy
             </Link>
 
             <Link
-              href="/terms"
+              href={WEBSITE_TERMS_AND_CONDITIONS}
               className="hover:text-green-300 transition"
             >
               Terms & Conditions

@@ -12,7 +12,7 @@ const ProductDetailPage = async ({ params }) => {
 
   if (!product) {
     return (
-      <div className="min-h-screen flex items-center text-red-500 justify-center">
+      <div className="min-h-screen bg-[#f4fff6] flex items-center text-red-500 justify-center">
         Product Not Found
       </div>
     );
