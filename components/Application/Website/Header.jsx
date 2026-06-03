@@ -22,6 +22,13 @@ const Header = async () => {
 
           {/* Desktop Menu */}
           <nav className="hidden md:flex items-center gap-6 lg:gap-8">
+            <Link
+              href={WEBSITE_HOME}
+              className="text-white hover:text-green-200 transition"
+            >
+              Home
+            </Link>
+
             {
               categories.map((category) => (
               <Link
@@ -56,7 +63,13 @@ const Header = async () => {
             </summary>
 
             <div className="absolute right-0 mt-4 w-52 bg-green-800 border border-green-600 rounded-lg shadow-lg p-4 flex flex-col gap-4">
-              
+              <Link
+                href={WEBSITE_HOME}
+                className="text-white hover:text-green-200 transition"
+              >
+                Home
+              </Link>
+
               {
                 categories.map((category) => (
                 <Link

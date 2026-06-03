@@ -6,6 +6,8 @@ import { getCategories } from "@/lib/categories";
 import { useRouter, useSearchParams } from "next/navigation";
 import { WEBSITE_LISTING } from "@/routes/WebsiteRoute";
 import { FaAngleDown } from "react-icons/fa6";
+import { IoClose } from "react-icons/io5";
+
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -193,7 +195,7 @@ const ProductsListClient = () => {
               {/* CLOSE */}
               <div className="flex justify-between items-center mb-1 lg:hidden">
                 <h2 className="text-xl font-bold">Filters</h2>
-                <button onClick={() => setIsFilterOpen(false)}>✕</button>
+                <button onClick={() => setIsFilterOpen(false)}><IoClose size={24} /></button>
               </div>
 
               <div className="flex items-center justify-between mb-6">
