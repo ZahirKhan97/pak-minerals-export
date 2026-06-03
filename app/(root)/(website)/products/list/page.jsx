@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import ProductCard from "@/components/Application/Website/ProductCard";
 import { getCategories } from "@/lib/categories";
 import { useRouter, useSearchParams } from "next/navigation";
