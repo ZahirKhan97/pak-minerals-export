@@ -1,4 +1,4 @@
-import { WEBSITE_CATEGORY, WEBSITE_HOME } from "@/routes/WebsiteRoute";
+import { WEBSITE_CATEGORY, WEBSITE_CONTACT_US, WEBSITE_HOME } from "@/routes/WebsiteRoute";
 import Link from "next/link";
 import { getCategories } from '@/lib/categories'
 
@@ -42,7 +42,7 @@ const Header = async () => {
             }
 
             <Link
-              href="#contact"
+              href={WEBSITE_CONTACT_US}
               className="text-white hover:text-green-200 transition"
             >
               Contact
@@ -83,7 +83,7 @@ const Header = async () => {
               }
 
               <Link
-                href="#contact"
+                href={WEBSITE_CONTACT_US}
                 className="text-white hover:text-green-200 transition"
               >
                 Contact

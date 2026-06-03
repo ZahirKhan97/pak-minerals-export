@@ -1,4 +1,4 @@
-import { WEBSITE_CATEGORY, WEBSITE_HOME, WEBSITE_PRIVACY_POLICY, WEBSITE_TERMS_AND_CONDITIONS } from '@/routes/WebsiteRoute';
+import { WEBSITE_CATEGORY, WEBSITE_CONTACT_US, WEBSITE_HOME, WEBSITE_PRIVACY_POLICY, WEBSITE_TERMS_AND_CONDITIONS } from '@/routes/WebsiteRoute';
 import Link from 'next/link';
 import React from 'react'
 import { FaWhatsapp } from "react-icons/fa";
@@ -61,7 +61,7 @@ const Footer = async () => {
 
               <li>
                 <Link
-                  href="#contact"
+                  href={WEBSITE_CONTACT_US}
                   className="hover:text-green-300 transition"
                 >
                   Contact
