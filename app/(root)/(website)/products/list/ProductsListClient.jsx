@@ -21,7 +21,6 @@ const ProductsListClient = () => {
   const [subcategories, setSubcategories] = useState([]);
 
   const [selectedCategory, setSelectedCategory] = useState("All");
-  const [selectedSubcategory, setSelectedSubcategory] = useState("All");
   const [sortBy, setSortBy] = useState("all");
 
   const [isFilterOpen, setIsFilterOpen] = useState(false);
@@ -41,10 +40,6 @@ const ProductsListClient = () => {
 
       if (selectedCategory !== "All") {
         params.append("category", selectedCategory);
-      }
-
-      if (selectedSubcategory !== "All") {
-        params.append("subcategory", selectedSubcategory);
       }
 
       if (sortBy !== "all") {
@@ -67,7 +62,6 @@ const ProductsListClient = () => {
     try {
       const data = await getCategories();
       setCategories(data.categoriesData || []);
-      setSubcategories(data.subcategoriesData || []);
     } catch (error) {
       console.error(error);
     }
@@ -79,16 +73,14 @@ const ProductsListClient = () => {
 
   useEffect(() => {
     getProducts();
-  }, [selectedCategory, selectedSubcategory, sortBy]);
+  }, [selectedCategory, sortBy]);
 
   // ================= URL INIT =================
   useEffect(() => {
     const category = searchParams.get("category") || "All";
-    const subcategory = searchParams.get("subcategory") || "All";
     const sort = searchParams.get("sort") || "all";
 
     setSelectedCategory(category);
-    setSelectedSubcategory(subcategory);
     setSortBy(sort);
   }, [searchParams]);
 
@@ -102,20 +94,9 @@ const ProductsListClient = () => {
     router.push(`?${params.toString()}`);
 
     setSelectedCategory(category.name);
-    setSelectedSubcategory("All");
     setIsFilterOpen(false);
   };
 
-  const handleSubcategorySelect = (subcategory) => {
-    const params = new URLSearchParams(searchParams.toString());
-
-    params.set("subcategory", subcategory.name);
-
-    router.push(`?${params.toString()}`);
-
-    setSelectedSubcategory(subcategory.name);
-    setIsFilterOpen(false);
-  };
 
   const handleSortChange = (value) => {
     const params = new URLSearchParams(searchParams.toString());
@@ -132,7 +113,6 @@ const ProductsListClient = () => {
     router.push(WEBSITE_LISTING);
 
     setSelectedCategory("All");
-    setSelectedSubcategory("All");
     setSortBy("all");
     setIsFilterOpen(false);
   };
@@ -229,27 +209,6 @@ const ProductsListClient = () => {
                       }`}
                     >
                       {c.name}
-                    </button>
-                  ))}
-                </div>
-              </div>
-
-              {/* SUBCATEGORIES */}
-              <div>
-                <h3 className="font-semibold mb-3">Subcategories</h3>
-
-                <div className="flex flex-col gap-2">
-                  {subcategories.map((s) => (
-                    <button
-                      key={s._id}
-                      onClick={() => handleSubcategorySelect(s)}
-                      className={`text-left px-3 rounded-lg py-1 border cursor-pointer ${
-                        selectedSubcategory === s.name
-                          ? "bg-green-700 text-white"
-                          : "bg-white"
-                      }`}
-                    >
-                      {s.name}
                     </button>
                   ))}
                 </div>

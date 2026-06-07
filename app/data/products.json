@@ -5,7 +5,6 @@
     "local_name": "Koila",
     "slug": "coal-thermal-coking",
     "category": "Minerals",
-    "subcategory": "Energy Mineral",
     "image": [
       "https://res.cloudinary.com/dovzb6w47/image/upload/v1779550029/Coal_afnews.jpg",
       "https://res.cloudinary.com/dovzb6w47/image/upload/v1779550026/Coal_2_ogrhqt.jpg"
@@ -33,7 +32,6 @@
     "local_name": "Tamba",
     "slug": "copper-ore-concentrate",
     "category": "Minerals",
-    "subcategory": "Metallic Mineral",
     "image": [
       "https://res.cloudinary.com/dovzb6w47/image/upload/v1779550034/Copper_sulphide_ahcl7g.jpg",
       "https://res.cloudinary.com/dovzb6w47/image/upload/v1779550033/Copper_2_ibyd63.png",
@@ -63,7 +61,6 @@
     "local_name": "Chromite",
     "slug": "chromite-ore",
     "category": "Minerals",
-    "subcategory": "Metallic Mineral",
     "image": [
       "https://res.cloudinary.com/dovzb6w47/image/upload/v1779550028/Chromite_wuvlj1.jpg"
     ],
@@ -90,7 +87,6 @@
     "local_name": "Zamarrud",
     "slug": "emerald",
     "category": "Gemstones",
-    "subcategory": "Precious Gemstone",
     "image": [
       "https://res.cloudinary.com/dovzb6w47/image/upload/v1779550044/Emerald_vhls60.jpg",
       "https://res.cloudinary.com/dovzb6w47/image/upload/v1779550042/Emerald_2_zgvmu5.jpg",
@@ -127,7 +123,6 @@
     "local_name": "Yaqoot",
     "slug": "ruby",
     "category": "Gemstones",
-    "subcategory": "Precious Gemstone",
     "image": [
       "https://res.cloudinary.com/dovzb6w47/image/upload/v1779550063/Ruby_l4ccgf.jpg",
       "https://res.cloudinary.com/dovzb6w47/image/upload/v1779550018/Afghanistan_Ruby_bme4ad.jpg"
@@ -163,7 +158,6 @@
     "local_name": "Neelam / Yakoot Azraq",
     "slug": "sapphire",
     "category": "Gemstones",
-    "subcategory": "Precious Gemstone",
     "image": [
       "https://res.cloudinary.com/dovzb6w47/image/upload/v1779550019/Blue_saphire_cfxyzr.jpg"
     ],
@@ -198,7 +192,6 @@
     "local_name": "Hajr al-Silah",
     "slug": "tourmaline",
     "category": "Gemstones",
-    "subcategory": "Fine Gemstone",
     "image": [
       "https://res.cloudinary.com/dovzb6w47/image/upload/v1779550024/Bi_Color_tourmaline_bu3qsu.jpg",
       "https://res.cloudinary.com/dovzb6w47/image/upload/v1779550022/Blue_Tourmaline_Afgahnistan_hehffe.jpg",
@@ -234,7 +227,6 @@
     "local_name": "Aqeeq-e-Surkh",
     "slug": "spinel",
     "category": "Gemstones",
-    "subcategory": "Precious Gemstone",
     "image": [
       "https://res.cloudinary.com/dovzb6w47/image/upload/v1779610528/Spinel_3_g74dwm.jpg",
       "https://res.cloudinary.com/dovzb6w47/image/upload/v1779610527/Spinel_pme6jd.jpg",
@@ -271,7 +263,6 @@
     "local_name": "Feroza-e-Abi",
     "slug": "aquamarine",
     "category": "Gemstones",
-    "subcategory": "Fine Gemstone",
     "image": [
       "https://res.cloudinary.com/dovzb6w47/image/upload/v1779610487/Aqua_marine_wfml4m.jpg",
       "https://res.cloudinary.com/dovzb6w47/image/upload/v1779610485/Aqua_marine_4_wae4pv.jpg",
@@ -308,7 +299,6 @@
     "local_name": "Pukhraj-e-Gulabi",
     "slug": "pink-topaz-imperial",
     "category": "Gemstones",
-    "subcategory": "Fine Gemstone",
     "image": [
       "https://res.cloudinary.com/dovzb6w47/image/upload/v1779610523/Pink_Topaz_hoqe7u.jpg",
       "https://res.cloudinary.com/dovzb6w47/image/upload/v1779610521/Pink_Topaz_5_uecdjp.jpg",
@@ -345,7 +335,6 @@
     "local_name": "Pukhraj Zard",
     "slug": "golden-topaz",
     "category": "Gemstones",
-    "subcategory": "Fine Gemstone",
     "image": [
       "https://res.cloudinary.com/dovzb6w47/image/upload/v1779610502/Golden_topaz_4_uzpfhl.jpg",
       "https://res.cloudinary.com/dovzb6w47/image/upload/v1779610499/Golden_topaz_2_dev7pr.jpg",
@@ -378,7 +367,6 @@
     "local_name": "Zabarjad",
     "slug": "peridot",
     "category": "Gemstones",
-    "subcategory": "Fine Gemstone",
     "image": [
       "https://res.cloudinary.com/dovzb6w47/image/upload/v1779610515/Peridot_3_y0gfg7.jpg",
       "https://res.cloudinary.com/dovzb6w47/image/upload/v1779610513/Peridot_2_lqn90g.jpg",
@@ -409,7 +397,6 @@
     "local_name": "Jamsheed / Aqeeq Banafsaji",
     "slug": "amethyst",
     "category": "Gemstones",
-    "subcategory": "Fine Gemstone",
     "image": [
       "https://res.cloudinary.com/dovzb6w47/image/upload/v1779610484/Amethyst_3_nimegu.jpg",
       "https://res.cloudinary.com/dovzb6w47/image/upload/v1779610483/Amethyst_2_ine37l.jpg",
@@ -445,7 +432,6 @@
     "local_name": "Namak-e-Himalaya",
     "slug": "himalayan-pink-salt",
     "category": "Minerals",
-    "subcategory": "Industrial / Food Mineral",
     "image": [
       "https://res.cloudinary.com/dovzb6w47/image/upload/v1779550063/Pink_Hamalayan_Salt_nbearx.jpg"
     ],
@@ -480,7 +466,6 @@
     "local_name": "Marmar",
     "slug": "marble-ziarat-white-onyx",
     "category": "Minerals",
-    "subcategory": "Industrial / Decorative Stone",
     "image": [
       "https://res.cloudinary.com/dovzb6w47/image/upload/v1779550053/Marble_znkrnw.jpg"
     ],
@@ -521,7 +506,6 @@
     "local_name": "Yaqoot-e-Ahmar",
     "slug": "garnet",
     "category": "Gemstones",
-    "subcategory": "Fine Gemstone",
     "image": [
       "https://res.cloudinary.com/dovzb6w47/image/upload/v1779550062/Red_Garnet_drr0ay.jpg"
     ],
@@ -550,7 +534,6 @@
     "local_name": "Beryl-e-Gulabi",
     "slug": "morganite",
     "category": "Gemstones",
-    "subcategory": "Fine Gemstone",
     "image": [
       "https://res.cloudinary.com/dovzb6w47/image/upload/v1779610503/Morganite_2_waxk1q.jpg",
       "https://res.cloudinary.com/dovzb6w47/image/upload/v1779610513/Morganite_3_evv3kp.jpg",
@@ -582,7 +565,6 @@
     "local_name": "Lajward",
     "slug": "lapis-lazuli",
     "category": "Gemstones",
-    "subcategory": "Ornamental Stone",
     "image": [
       "https://res.cloudinary.com/dovzb6w47/image/upload/v1779610502/Lapis_Lazuli_uzm0js.jpg",
       "https://res.cloudinary.com/dovzb6w47/image/upload/v1779610501/Lapis_lazuli_2_a2vztf.jpg",
@@ -616,7 +598,6 @@
     "local_name": "Sang-e-K2",
     "slug": "k2-jasper",
     "category": "Gemstones",
-    "subcategory": "Ornamental Stone",
     "image": [],
     "group": "Unique to Pakistan",
     "origin": {
@@ -643,7 +624,6 @@
     "local_name": "Yaashm / Sang-e-Sabz",
     "slug": "nephrite-jade",
     "category": "Gemstones",
-    "subcategory": "Precious Ornamental Stone",
     "image": [
       "https://res.cloudinary.com/dovzb6w47/image/upload/v1779550052/Nephrite_zaqjro.jpg",
       "https://res.cloudinary.com/dovzb6w47/image/upload/v1779550052/Nephrite_2_hemids.jpg"
@@ -684,7 +664,6 @@
     "local_name": "Bilaur",
     "slug": "quartz-crystal",
     "category": "Gemstones",
-    "subcategory": "Semi-Precious / Collector Mineral",
     "image": [
       "https://res.cloudinary.com/dovzb6w47/image/upload/v1779550062/Quartz_qyo8ra.jpg"
     ],
@@ -719,7 +698,6 @@
     "local_name": "Kunzite",
     "slug": "kunzite",
     "category": "Gemstones",
-    "subcategory": "Collector Gemstone",
     "image": [],
     "group": "Spodumene Group",
     "origin": {
@@ -746,7 +724,6 @@
     "local_name": "Apatite",
     "slug": "apatite",
     "category": "Gemstones",
-    "subcategory": "Collector Gemstone / Mineral",
     "image": [],
     "group": "Apatite",
     "origin": {
@@ -773,7 +750,6 @@
     "local_name": "Brucite",
     "slug": "brucite",
     "category": "Gemstones",
-    "subcategory": "Rare Collector Mineral",
     "image": [],
     "group": "Brucite",
     "origin": {
@@ -800,7 +776,6 @@
     "local_name": "Sang-e-Sabz",
     "slug": "serpentine",
     "category": "Gemstones",
-    "subcategory": "Decorative Stone",
     "image": [
       "https://res.cloudinary.com/dovzb6w47/image/upload/v1779550069/Serpentine_rd94ht.jpg"
     ],
@@ -827,7 +802,6 @@
     "local_name": "Celestite",
     "slug": "celestite",
     "category": "Gemstones",
-    "subcategory": "Collector Mineral",
     "image": [],
     "group": "Strontium Sulfate",
     "origin": { "region": "Balochistan, Pakistan" },
@@ -852,7 +826,6 @@
     "local_name": "Fluorite",
     "slug": "fluorite",
     "category": "Gemstones",
-    "subcategory": "Collector Mineral",
     "image": [],
     "group": "Halide Mineral",
     "origin": { "region": "Balochistan & Gilgit-Baltistan, Pakistan" },
@@ -877,7 +850,6 @@
     "local_name": "Malachite",
     "slug": "chrysocolla-malachite",
     "category": "Gemstones",
-    "subcategory": "Decorative Copper Mineral",
     "image": [],
     "group": "Copper Mineral",
     "origin": { "region": "Balochistan, Pakistan" },
@@ -902,7 +874,6 @@
     "local_name": "Namak",
     "slug": "rock-salt-industrial",
     "category": "Minerals",
-    "subcategory": "Industrial Mineral",
     "image": [
       "https://res.cloudinary.com/dovzb6w47/image/upload/v1779550079/White_rock_salt_meqv4m.jpg"
     ],
@@ -930,7 +901,6 @@
     "local_name": "Loha Khaam",
     "slug": "iron-ore",
     "category": "Minerals",
-    "subcategory": "Metallic Mineral",
     "image": [],
     "group": "Ferrous Metal",
     "origin": { "region": "Dilband & Chiniot, Pakistan" },
@@ -955,7 +925,6 @@
     "local_name": "Sona / Chandi",
     "slug": "gold-silver",
     "category": "Minerals",
-    "subcategory": "Precious Metal",
     "image": [],
     "group": "Precious Metals",
     "origin": {
@@ -982,7 +951,6 @@
     "local_name": "Seesa / Zinc",
     "slug": "lead-zinc-ore-concentrate",
     "category": "Minerals",
-    "subcategory": "Metallic Mineral",
     "image": [
       "https://res.cloudinary.com/dovzb6w47/image/upload/v1779550053/Lead_ore_wbciok.jpg"
     ],
@@ -1011,7 +979,6 @@
     "local_name": "Manganese",
     "slug": "manganese-ore",
     "category": "Minerals",
-    "subcategory": "Metallic Mineral",
     "image": [
       "https://res.cloudinary.com/dovzb6w47/image/upload/v1779550057/Manganese_td7ckb.jpg"
     ],
@@ -1040,7 +1007,6 @@
     "local_name": "Barite",
     "slug": "barite-barium-sulphate",
     "category": "Minerals",
-    "subcategory": "Industrial Chemical Mineral",
     "image": [],
     "group": "Barium Sulphate",
     "origin": {
@@ -1067,7 +1033,6 @@
     "local_name": "Jipsum",
     "slug": "gypsum",
     "category": "Minerals",
-    "subcategory": "Industrial Mineral",
     "image": [],
     "group": "Bulk Commodity",
     "origin": { "region": "Salt Range, Punjab; Balochistan, Pakistan" },
@@ -1092,7 +1057,6 @@
     "local_name": "Ret-e-Silica",
     "slug": "silica-sand-quartz-sand",
     "category": "Minerals",
-    "subcategory": "Industrial Non-Metallic Mineral",
     "image": [
       "https://res.cloudinary.com/dovzb6w47/image/upload/v1779550073/Silica_sand_m09cqa.jpg"
     ],
@@ -1121,7 +1085,6 @@
     "local_name": "Gandhak",
     "slug": "sulphur",
     "category": "Minerals",
-    "subcategory": "Non-Metallic Industrial Mineral",
     "image": [
       "https://res.cloudinary.com/dovzb6w47/image/upload/v1779550070/Sulphur_s8buif.jpg"
     ],
@@ -1148,7 +1111,6 @@
     "local_name": "Bentonite",
     "slug": "bentonite",
     "category": "Minerals",
-    "subcategory": "Industrial Clay Mineral",
     "image": [],
     "group": "Clay Mineral",
     "origin": {
@@ -1180,7 +1142,6 @@
     "local_name": "Chuna Pathar / Dolomite",
     "slug": "limestone-dolomite",
     "category": "Minerals",
-    "subcategory": "Industrial Construction Mineral",
     "image": [],
     "group": "Construction Mineral",
     "origin": {
@@ -1217,7 +1178,6 @@
     "local_name": "Sang-e-Khara / Calcite",
     "slug": "calcite",
     "category": "Minerals",
-    "subcategory": "Industrial Mineral / Collector Crystal",
     "image": [],
     "group": "Calcite Mineral",
     "origin": { "region": "Balochistan, Punjab & KPK, Pakistan" },
@@ -1242,7 +1202,6 @@
     "local_name": "Aatishi Mitti",
     "slug": "fire-clay-refractory-clay",
     "category": "Minerals",
-    "subcategory": "Industrial Clay",
     "image": [],
     "group": "Refractory Material",
     "origin": {
@@ -1274,7 +1233,6 @@
     "local_name": "Darya Kay Pathhar",
     "slug": "river-pebbles",
     "category": "Minerals",
-    "subcategory": "Natural Stone",
     "image": [
       "https://res.cloudinary.com/dovzb6w47/image/upload/v1779550070/River_pebbles_ku5lpm.jpg"
     ],
@@ -1301,7 +1259,6 @@
     "local_name": "Ret",
     "slug": "sand-construction-industrial",
     "category": "Minerals",
-    "subcategory": "Construction & Industrial Mineral",
     "image": [],
     "group": "Construction Mineral",
     "origin": { "region": "Indus River & Tributaries; Hub River, Pakistan" },
@@ -1331,8 +1288,7 @@
     "name": "Antimony (Stibnite)",
     "local_name": "Antimony / Stibnite",
     "slug": "antimony-stibnite",
-    "category": "Metallic Mineral",
-    "subcategory": "Critical Strategic Metal",
+    "category": "Minerals",
     "image": [],
     "group": "Antimony Mineral",
     "origin": {
@@ -1386,8 +1342,7 @@
     "name": "Mica",
     "local_name": "Mica",
     "slug": "mica",
-    "category": "Industrial Non-Metallic Mineral",
-    "subcategory": "Collector Specimen (Lepidolite)",
+    "category": "Minerals",
     "image": [],
     "group": "Sheet Silicate Mineral",
     "origin": {
