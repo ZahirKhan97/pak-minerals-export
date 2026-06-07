@@ -13,11 +13,11 @@ const Home = async () => {
     <>
       <BannerCarousel />
       <section id="minerals" className="pt-20">
-        <div className="max-w-7xl mx-auto px-4">
+        <div className="max-w-6xl mx-auto px-4">
           <div className="flex justify-between items-center mb-8 border-b pb-2">
             {/* Title */}
             <h2 className="text-2xl md:text-4xl font-bold text-center text-green-700">
-              Minerals Collection
+              Minerals
             </h2>
 
             <Link
@@ -38,11 +38,11 @@ const Home = async () => {
       </section>
 
       <section id="gems" className="pt-20">
-        <div className="max-w-7xl mx-auto px-4">
+        <div className="max-w-6xl mx-auto px-4">
           <div className="flex justify-between items-center mb-8 border-b pb-2">
             {/* Title */}
             <h2 className="text-2xl md:text-4xl font-bold text-center text-green-700">
-              Gemstones Collection
+              Gemstones
             </h2>
 
             <Link

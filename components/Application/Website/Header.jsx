@@ -1,6 +1,7 @@
 import { WEBSITE_CATEGORY, WEBSITE_CONTACT_US, WEBSITE_HOME } from "@/routes/WebsiteRoute";
 import Link from "next/link";
 import { getCategories } from '@/lib/categories'
+import { FaBars } from "react-icons/fa6";
 
 
 const Header = async () => {
@@ -59,7 +60,7 @@ const Header = async () => {
           {/* Mobile Menu */}
           <details className="md:hidden relative">
             <summary className="list-none cursor-pointer text-white text-3xl">
-              ☰
+              <FaBars />
             </summary>
 
             <div className="absolute right-0 mt-4 w-52 bg-green-800 border border-green-600 rounded-lg shadow-lg p-4 flex flex-col gap-4">

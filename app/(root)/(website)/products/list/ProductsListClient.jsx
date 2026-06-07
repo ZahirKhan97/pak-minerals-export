@@ -6,7 +6,6 @@ import { getCategories } from "@/lib/categories";
 import { useRouter, useSearchParams } from "next/navigation";
 import { WEBSITE_LISTING } from "@/routes/WebsiteRoute";
 import { FaAngleDown } from "react-icons/fa6";
-import { IoClose } from "react-icons/io5";
 
 import {
   DropdownMenu,
@@ -116,15 +115,15 @@ const ProductsListClient = () => {
 
   return (
     <section className="min-h-screen lg:pt-8 pt-6">
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-6xl mx-auto px-4">
         {/* HEADER */}
         <div className="mb-10">
           <span className="text-green-700 font-semibold uppercase tracking-wider">
             Products
           </span>
 
-          <h1 className="text-3xl md:text-5xl font-bold text-gray-800 mt-3">
-            Explore Premium Minerals
+          <h1 className="text-3xl md:text-5xl font-bold text-gray-800 mt-3 capitalize">
+            Explore Premium {selectedCategory === 'All' ? 'Minerals & Gems' : selectedCategory}
           </h1>
 
           <p className="text-gray-600 mt-4 max-w-2xl">
@@ -219,7 +218,7 @@ const ProductsListClient = () => {
 
             {/* PRODUCTS GRID */}
             {products.length > 0 ? (
-              <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-x-4 gap-y-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-x-4 gap-y-8">
                 {products.map((p) => (
                   <ProductCard key={p.id} product={p} />
                 ))}

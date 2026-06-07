@@ -20,7 +20,7 @@ const ProductDetailPage = async ({ params }) => {
 
   return (
     <section className="min-h-screen bg-[#f4fff6] py-6 lg:py-8">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-4">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-4">
         {/* Breadcrumb */}
         <div className="flex flex-wrap items-center gap-2 text-sm text-gray-600 mb-8">
           <Link href="/" className="hover:text-green-700 transition">
@@ -52,10 +52,6 @@ const ProductDetailPage = async ({ params }) => {
             <div className="flex flex-wrap gap-3">
               <span className="bg-green-100 text-green-700 text-sm px-4 py-1 rounded-sm font-medium">
                 {product.category}
-              </span>
-
-              <span className="bg-orange-100 text-orange-700 text-sm px-4 py-1 rounded-sm font-medium">
-                {product.subcategory}
               </span>
             </div>
 

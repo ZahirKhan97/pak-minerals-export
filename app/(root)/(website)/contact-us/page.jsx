@@ -11,7 +11,7 @@ import {
 export default function ContactUs() {
   return (
     <section className="min-h-screen bg-[#f4fff6] py-6 lg:py-8">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-4">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-4">
         {/* Header */}
         <div className="mb-12">
           <span className="text-green-700 font-semibold uppercase tracking-wider">

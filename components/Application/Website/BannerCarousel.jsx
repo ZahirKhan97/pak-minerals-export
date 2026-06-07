@@ -9,19 +9,19 @@ const slides = [
     title: "Premium Minerals Export",
     desc: "Direct supply from Pakistan to worldwide buyers",
     image:
-      "https://images.unsplash.com/photo-1581091215367-59ab6b43b4d0",
+      "/assets/banner-1.jpg",
   },
   {
     title: "High Quality Gems",
     desc: "Natural stones with certified quality",
     image:
-      "https://images.unsplash.com/photo-1602751584552-8ba73aad10e1",
+      "/assets/banner-2.jpg",
   },
   {
     title: "Bulk Supply Available",
     desc: "Wholesale export at competitive prices",
     image:
-      "https://images.unsplash.com/photo-1615484477201-9c72c2a70c55",
+      "/assets/banner-3.jpg",
   },
 ];
 
