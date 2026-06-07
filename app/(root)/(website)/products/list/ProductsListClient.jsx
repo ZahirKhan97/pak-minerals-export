@@ -18,7 +18,6 @@ import {
 const ProductsListClient = () => {
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]);
-  const [subcategories, setSubcategories] = useState([]);
 
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [sortBy, setSortBy] = useState("all");
