@@ -35,7 +35,7 @@ const Home = async () => {
 
                 {/* Title */}
                 <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-green-700">
-                Gems Collection
+                Gemstones Collection
                 </h2>
 
                 {/* Grid */}
