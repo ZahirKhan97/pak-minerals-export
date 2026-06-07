@@ -87,15 +87,13 @@ const ProductsListClient = () => {
   const handleCategorySelect = (category) => {
     const params = new URLSearchParams(searchParams.toString());
 
-    params.set("category", category.name);
-    params.delete("subcategory");
+    params.set("category", category.slug);
 
     router.push(`?${params.toString()}`);
 
-    setSelectedCategory(category.name);
+    setSelectedCategory(category.slug);
     setIsFilterOpen(false);
   };
-
 
   const handleSortChange = (value) => {
     const params = new URLSearchParams(searchParams.toString());
@@ -136,179 +134,92 @@ const ProductsListClient = () => {
 
         {/* ================= LAYOUT ================= */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-4">
-          {/* ================= FILTERS ================= */}
-          <div className="lg:col-span-3 rounded-lg">
-            {/* MOBILE FILTER BUTTON */}
-            <div className=" lg:hidden mb-4 flex justify-between gap-2">
-              <button
-                onClick={() => setIsFilterOpen(true)}
-                className="px-4 py-1 bg-green-700 text-white rounded-lg"
-              >
-                Filters
-              </button>
-              <button
-                    onClick={clearAllFilters}
-                    className="px-4 border border-red-300 text-red-600 rounded-lg"
-                >
-                    Clear All Filters
-                </button>
-            </div>
-
-            {/* OVERLAY */}
-            {isFilterOpen && (
-              <div
-                onClick={() => setIsFilterOpen(false)}
-                className="fixed inset-0 bg-black/40 z-40 lg:hidden"
-              />
-            )}
-
-            {/* DRAWER / SIDEBAR */}
-            <div
-              className={`
-                fixed lg:static top-0 left-0 h-full bg-white z-50 ml-auto px-5 py-2 overflow-y-auto
-                transform transition-transform duration-300
-                lg:translate-x-0
-                ${isFilterOpen ? "translate-x-0" : "-translate-x-full"}
-              `}
-            >
-              {/* CLOSE */}
-              <div className="flex justify-between items-center mb-1 lg:hidden">
-                <h2 className="text-xl font-bold">Filters</h2>
-                <button onClick={() => setIsFilterOpen(false)}><IoClose size={24} /></button>
-              </div>
-
-              <div className="flex items-center justify-between mb-6">
-                <h2 className="text-xl font-bold hidden lg:block">
-                    Filters
-                </h2>
-
-                {/* CLEAR */}
-                <button
-                    onClick={clearAllFilters}
-                    className="px-4 border border-red-300 text-red-600 rounded-lg cursor-pointer lg:block hidden"
-                >
-                    Clear All Filters
-                </button>
-              </div>
-
-
-              {/* CATEGORIES */}
-              <div className="mb-6">
-                <h3 className="font-semibold mb-3">Categories</h3>
-
-                <div className="flex flex-col gap-2">
-                  {categories.map((c) => (
-                    <button
-                      key={c._id}
-                      onClick={() => handleCategorySelect(c)}
-                      className={`text-left px-3 rounded-lg py-1 border cursor-pointer ${
-                        selectedCategory === c.name
-                          ? "bg-green-700 text-white"
-                          : "bg-white"
-                      }`}
-                    >
-                      {c.name}
-                    </button>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-
           {/* ================= PRODUCTS ================= */}
-          <div className="lg:col-span-9">
+          <div className="lg:col-span-12">
             {/* TOP BAR */}
-            <div className="bg-white rounded-lg border lg:px-4 px-2 py-1 mb-8 flex justify-between items-center">
-              <h3 className="font-semibold">
-                Showing {products.length} Products
-              </h3>
+            <div className="bg-white rounded-lg border lg:px-4 px-2 py-3 mb-8">
+              {/* Top Row */}
+              <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center gap-3">
+                <h3 className="font-semibold">
+                  Showing {products.length} Products
+                </h3>
 
-              {/* DESKTOP SORT */}
-              <div className="hidden lg:flex gap-2">
-                <DropdownMenu>
-                  <DropdownMenuTrigger asChild>
-                    <button className="px-4 py-1 rounded-lg border bg-white flex items-center gap-0">
-                      Sort: {sortBy}
-                      <FaAngleDown />
-                    </button>
-                  </DropdownMenuTrigger>
+                {/* Actions */}
+                <div className="flex flex-wrap gap-2 lg:gap-2">
+                  {/* Category (hidden on mobile OR stays dropdown) */}
+                  <div className="">
+                    <DropdownMenu>
+                      <DropdownMenuTrigger asChild>
+                        <button className="px-4 py-2 rounded-sm border border-green-700 cursor-pointer bg-white flex items-center gap-2 capitalize">
+                          {selectedCategory}
+                          <FaAngleDown />
+                        </button>
+                      </DropdownMenuTrigger>
 
-                  <DropdownMenuContent align="end" className="w-44">
-                    <DropdownMenuItem
-                      onClick={() => handleSortChange("all")}
-                      className={
-                        sortBy === "all" ? "bg-green-700 text-white" : ""
-                      }
-                    >
-                      All
-                    </DropdownMenuItem>
+                      <DropdownMenuContent align="end" className="w-35 rounded-sm">
+                        {categories.map((c) => (
+                          <DropdownMenuItem
+                            key={c._id}
+                            onClick={() => handleCategorySelect(c)}
+                            className={`${
+                              selectedCategory === c.slug
+                                ? "bg-green-700 text-white"
+                                : ""
+                            } cursor-pointer rounded-sm`}
+                          >
+                            {c.name}
+                          </DropdownMenuItem>
+                        ))}
+                      </DropdownMenuContent>
+                    </DropdownMenu>
+                  </div>
 
-                    <DropdownMenuItem
-                      onClick={() => handleSortChange("ascending")}
-                      className={
-                        sortBy === "ascending" ? "bg-green-700 text-white" : ""
-                      }
-                    >
-                      Ascending
-                    </DropdownMenuItem>
+                  {/* Sort (always visible but smaller on mobile) */}
+                  <DropdownMenu>
+                    <DropdownMenuTrigger asChild>
+                      <button className="px-4 py-2 rounded-sm border border-green-700 cursor-pointer bg-white flex items-center gap-2 capitalize">
+                        Sort: {sortBy}
+                        <FaAngleDown />
+                      </button>
+                    </DropdownMenuTrigger>
 
-                    <DropdownMenuItem
-                      onClick={() => handleSortChange("descending")}
-                      className={
-                        sortBy === "descending" ? "bg-green-700 text-white" : ""
-                      }
-                    >
-                      Descending
-                    </DropdownMenuItem>
-                  </DropdownMenuContent>
-                </DropdownMenu>
-              </div>
+                    <DropdownMenuContent align="end" className="w-20 rounded-sm">
+                      <DropdownMenuItem 
+                      className={`${sortBy === "all" ? "bg-green-700 text-white" : ""} cursor-pointer rounded-sm`}
+                      onClick={() => handleSortChange("all")}>
+                        All
+                      </DropdownMenuItem>
 
-              {/* MOBILE SORT */}
-              <div className="lg:hidden relative">
-                <DropdownMenu>
-                  <DropdownMenuTrigger asChild>
-                    <button className="px-4 py-1 rounded-lg border bg-white flex items-center gap-2">
-                      Sort: {sortBy}
-                      <FaAngleDown />
-                    </button>
-                  </DropdownMenuTrigger>
+                      <DropdownMenuItem
+                      className={`${sortBy === "ascending" ? "bg-green-700 text-white" : ""} cursor-pointer rounded-sm`}
+                        onClick={() => handleSortChange("ascending")}
+                      >
+                        Ascending
+                      </DropdownMenuItem>
 
-                  <DropdownMenuContent align="end" className="w-44">
-                    <DropdownMenuItem
-                      onClick={() => handleSortChange("all")}
-                      className={
-                        sortBy === "all" ? "bg-green-700 text-white" : ""
-                      }
-                    >
-                      All
-                    </DropdownMenuItem>
+                      <DropdownMenuItem
+                      className={`${sortBy === "descending" ? "bg-green-700 text-white" : ""} cursor-pointer rounded-sm`}
+                        onClick={() => handleSortChange("descending")}
+                      >
+                        Descending
+                      </DropdownMenuItem>
+                    </DropdownMenuContent>
+                  </DropdownMenu>
 
-                    <DropdownMenuItem
-                      onClick={() => handleSortChange("ascending")}
-                      className={
-                        sortBy === "ascending" ? "bg-green-700 text-white" : ""
-                      }
-                    >
-                      Ascending
-                    </DropdownMenuItem>
-
-                    <DropdownMenuItem
-                      onClick={() => handleSortChange("descending")}
-                      className={
-                        sortBy === "descending" ? "bg-green-700 text-white" : ""
-                      }
-                    >
-                      Descending
-                    </DropdownMenuItem>
-                  </DropdownMenuContent>
-                </DropdownMenu>
+                  {/* Clear */}
+                  <button
+                    onClick={clearAllFilters}
+                    className="px-3 py-2 border border-red-300 text-red-600 rounded-sm cursor-pointer"
+                  >
+                    Clear Filters
+                  </button>
+                </div>
               </div>
             </div>
 
             {/* PRODUCTS GRID */}
             {products.length > 0 ? (
-              <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-x-4 gap-y-8">
                 {products.map((p) => (
                   <ProductCard key={p.id} product={p} />
                 ))}

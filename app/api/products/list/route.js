@@ -5,7 +5,6 @@ export async function GET(req) {
     const { searchParams } = new URL(req.url);
 
     const category = searchParams.get("category");
-    const subcategory = searchParams.get("subcategory");
     const sort = searchParams.get("sort"); // ascending | descending
 
     let products = [...productsData];
@@ -14,13 +13,6 @@ export async function GET(req) {
     if (category && category !== "All") {
         products = products.filter(
             (p) => p.category.toLowerCase() === category.toLowerCase()
-        );
-    }
-
-    // Subcategory Filter
-    if (subcategory && subcategory !== "All") {
-        products = products.filter(
-            (p) => p.subcategory.toLowerCase() === subcategory.toLowerCase()
         );
     }
 

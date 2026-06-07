@@ -1,5 +1,7 @@
 "use client";
 
+import { WEBSITE_LISTING } from "@/routes/WebsiteRoute";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const slides = [
@@ -72,12 +74,12 @@ export default function BannerCarousel() {
               {slide.desc}
             </p>
 
-            <a
-              href="#minerals"
-              className="bg-green-600 hover:bg-green-700 px-6 py-3 rounded-lg transition"
+            <Link
+              href={WEBSITE_LISTING}
+              className="bg-green-600 hover:bg-green-700 px-6 py-3 rounded-sm transition"
             >
               Explore Products
-            </a>
+            </Link>
           </div>
         </div>
       ))}
