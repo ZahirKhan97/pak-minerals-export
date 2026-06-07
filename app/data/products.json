@@ -7,7 +7,7 @@
     "category": "Minerals",
     "subcategory": "Energy Mineral",
     "image": [
-      "https://res.cloudinary.com/dovzb6w47/image/upload/v1779550029/Coal_afnews.jpg", 
+      "https://res.cloudinary.com/dovzb6w47/image/upload/v1779550029/Coal_afnews.jpg",
       "https://res.cloudinary.com/dovzb6w47/image/upload/v1779550026/Coal_2_ogrhqt.jpg"
     ],
     "group": "Carbon Mineral",
@@ -19,12 +19,15 @@
     "minimum_order": ["500 MT"],
     "export_grades": ["Thermal", "Industrial"],
     "special_note": "Large-scale reserves in Sindh",
-    "seo": { "meta_title": "Pakistan Coal Resources", "meta_description": "Thermal and coking coal from Pakistan." },
+    "seo": {
+      "meta_title": "Pakistan Coal Resources",
+      "meta_description": "Thermal and coking coal from Pakistan."
+    },
     "tags": ["coal", "energy mineral"],
     "is_featured": true,
     "status": "active"
   },
-   {
+  {
     "id": 28,
     "name": "Copper Ore & Concentrate",
     "local_name": "Tamba",
@@ -32,7 +35,7 @@
     "category": "Minerals",
     "subcategory": "Metallic Mineral",
     "image": [
-      "https://res.cloudinary.com/dovzb6w47/image/upload/v1779550034/Copper_sulphide_ahcl7g.jpg", 
+      "https://res.cloudinary.com/dovzb6w47/image/upload/v1779550034/Copper_sulphide_ahcl7g.jpg",
       "https://res.cloudinary.com/dovzb6w47/image/upload/v1779550033/Copper_2_ibyd63.png",
       "https://res.cloudinary.com/dovzb6w47/image/upload/v1779550037/Copper_hozzhv.jpg",
       "https://res.cloudinary.com/dovzb6w47/image/upload/v1779550039/Copper_o4irwa.jpg"
@@ -46,12 +49,15 @@
     "minimum_order": ["100 MT"],
     "export_grades": ["Cu Concentrate"],
     "special_note": "World-class porphyry systems",
-    "seo": { "meta_title": "Pakistan Copper Ore", "meta_description": "Copper ore and concentrate exports from Pakistan." },
+    "seo": {
+      "meta_title": "Pakistan Copper Ore",
+      "meta_description": "Copper ore and concentrate exports from Pakistan."
+    },
     "tags": ["copper", "metallic mineral"],
     "is_featured": true,
     "status": "active"
   },
-   {
+  {
     "id": 29,
     "name": "Chromite Ore",
     "local_name": "Chromite",
@@ -70,7 +76,10 @@
     "minimum_order": ["100 MT"],
     "export_grades": ["Metallurgical", "Chemical Grade"],
     "special_note": "Major export commodity",
-    "seo": { "meta_title": "Pakistan Chromite Ore", "meta_description": "High-grade chromite ore from Pakistan." },
+    "seo": {
+      "meta_title": "Pakistan Chromite Ore",
+      "meta_description": "High-grade chromite ore from Pakistan."
+    },
     "tags": ["chromite", "chromium ore"],
     "is_featured": true,
     "status": "active"
@@ -84,7 +93,7 @@
     "subcategory": "Precious Gemstone",
     "image": [
       "https://res.cloudinary.com/dovzb6w47/image/upload/v1779550044/Emerald_vhls60.jpg",
-      "https://res.cloudinary.com/dovzb6w47/image/upload/v1779550042/Emerald_2_zgvmu5.jpg", 
+      "https://res.cloudinary.com/dovzb6w47/image/upload/v1779550042/Emerald_2_zgvmu5.jpg",
       "https://res.cloudinary.com/dovzb6w47/image/upload/v1779550051/Emerlad_3_lywdb4.png"
     ],
     "group": "Beryl Group",
@@ -102,7 +111,13 @@
       "meta_title": "Swat Emerald - Precious Green Gemstone from Pakistan",
       "meta_description": "Premium quality Swat emeralds from Pakistan available as rough, faceted loose stones, and mineral specimens."
     },
-    "tags": ["emerald", "swat emerald", "green gemstone", "beryl", "pakistan gemstones"],
+    "tags": [
+      "emerald",
+      "swat emerald",
+      "green gemstone",
+      "beryl",
+      "pakistan gemstones"
+    ],
     "is_featured": true,
     "status": "active"
   },
@@ -114,7 +129,7 @@
     "category": "Gemstones",
     "subcategory": "Precious Gemstone",
     "image": [
-      "https://res.cloudinary.com/dovzb6w47/image/upload/v1779550063/Ruby_l4ccgf.jpg", 
+      "https://res.cloudinary.com/dovzb6w47/image/upload/v1779550063/Ruby_l4ccgf.jpg",
       "https://res.cloudinary.com/dovzb6w47/image/upload/v1779550018/Afghanistan_Ruby_bme4ad.jpg"
     ],
     "group": "Corundum Group",
@@ -132,7 +147,13 @@
       "meta_title": "Hunza Ruby - Precious Ruby from Pakistan",
       "meta_description": "Premium Hunza ruby gemstones from Gilgit-Baltistan with vivid red saturation and certification options."
     },
-    "tags": ["ruby", "hunza ruby", "red gemstone", "corundum", "pakistan gemstones"],
+    "tags": [
+      "ruby",
+      "hunza ruby",
+      "red gemstone",
+      "corundum",
+      "pakistan gemstones"
+    ],
     "is_featured": true,
     "status": "active"
   },
@@ -161,7 +182,13 @@
       "meta_title": "Pakistan Sapphire - Kashmir Type Sapphire",
       "meta_description": "High-quality sapphire gemstones from Pakistan including Kashmir-type blue sapphires."
     },
-    "tags": ["sapphire", "neelam", "blue gemstone", "corundum", "kashmir sapphire"],
+    "tags": [
+      "sapphire",
+      "neelam",
+      "blue gemstone",
+      "corundum",
+      "kashmir sapphire"
+    ],
     "is_featured": true,
     "status": "active"
   },
@@ -173,8 +200,8 @@
     "category": "Gemstones",
     "subcategory": "Fine Gemstone",
     "image": [
-      "https://res.cloudinary.com/dovzb6w47/image/upload/v1779550024/Bi_Color_tourmaline_bu3qsu.jpg", 
-      "https://res.cloudinary.com/dovzb6w47/image/upload/v1779550022/Blue_Tourmaline_Afgahnistan_hehffe.jpg", 
+      "https://res.cloudinary.com/dovzb6w47/image/upload/v1779550024/Bi_Color_tourmaline_bu3qsu.jpg",
+      "https://res.cloudinary.com/dovzb6w47/image/upload/v1779550022/Blue_Tourmaline_Afgahnistan_hehffe.jpg",
       "https://res.cloudinary.com/dovzb6w47/image/upload/v1779550074/Tourmaline_ibjqpr.jpg"
     ],
     "group": "Cyclosilicate Group",
@@ -192,7 +219,12 @@
       "meta_title": "Pakistan Tourmaline Gemstones",
       "meta_description": "Collector-grade tourmaline gemstones from Baltistan with vivid natural colors."
     },
-    "tags": ["tourmaline", "watermelon tourmaline", "neon gemstone", "collector gems"],
+    "tags": [
+      "tourmaline",
+      "watermelon tourmaline",
+      "neon gemstone",
+      "collector gems"
+    ],
     "is_featured": true,
     "status": "active"
   },
@@ -223,7 +255,13 @@
       "meta_title": "Hunza Spinel - Natural Spinel from Pakistan",
       "meta_description": "Collector-grade natural spinel gemstones from Hunza Valley, Pakistan."
     },
-    "tags": ["spinel", "hunza spinel", "pink gemstone", "red gemstone", "collector gems"],
+    "tags": [
+      "spinel",
+      "hunza spinel",
+      "pink gemstone",
+      "red gemstone",
+      "collector gems"
+    ],
     "is_featured": true,
     "status": "active"
   },
@@ -254,7 +292,13 @@
       "meta_title": "Pakistan Aquamarine - Fine Blue Gemstone",
       "meta_description": "Premium aquamarine gemstones from Shigar and Nagar valleys in Pakistan."
     },
-    "tags": ["aquamarine", "blue gemstone", "beryl", "skardu gemstones", "collector crystals"],
+    "tags": [
+      "aquamarine",
+      "blue gemstone",
+      "beryl",
+      "skardu gemstones",
+      "collector crystals"
+    ],
     "is_featured": true,
     "status": "active"
   },
@@ -285,7 +329,13 @@
       "meta_title": "Katlang Pink Topaz - Rare Pakistani Gemstone",
       "meta_description": "Rare natural pink topaz from Katlang, Pakistan with unique baby-pink hues."
     },
-    "tags": ["pink topaz", "imperial topaz", "katlang gemstone", "rare gemstone", "pink gemstone"],
+    "tags": [
+      "pink topaz",
+      "imperial topaz",
+      "katlang gemstone",
+      "rare gemstone",
+      "pink gemstone"
+    ],
     "is_featured": false,
     "status": "active"
   },
@@ -321,7 +371,7 @@
     "is_featured": false,
     "status": "active"
   },
-  
+
   {
     "id": 9,
     "name": "Peridot",
@@ -380,7 +430,12 @@
       "meta_title": "Pakistan Amethyst Crystals",
       "meta_description": "Premium violet amethyst crystals and faceted gemstones from Pakistan."
     },
-    "tags": ["amethyst", "purple gemstone", "quartz crystal", "collector minerals"],
+    "tags": [
+      "amethyst",
+      "purple gemstone",
+      "quartz crystal",
+      "collector minerals"
+    ],
     "is_featured": false,
     "status": "active"
   },
@@ -400,7 +455,13 @@
     },
     "description": "World-famous Himalayan pink salt mined from one of the world's largest salt mines with natural iron-rich coloration.",
     "color": ["Light Pink", "Deep Rose", "Red-Orange"],
-    "available_as": ["Food-Grade Granules", "Lamp Blocks", "Tiles", "Slabs", "Cooking Plates"],
+    "available_as": [
+      "Food-Grade Granules",
+      "Lamp Blocks",
+      "Tiles",
+      "Slabs",
+      "Cooking Plates"
+    ],
     "unit_of_sale": ["Per Metric Ton (MT)", "Per Kilogram (kg)"],
     "minimum_order": ["1 MT bulk", "100 kg retail"],
     "export_grades": ["Food Grade (ISO)", "Decorative Grade", "Lamp Grade"],
@@ -429,7 +490,13 @@
     },
     "description": "Premium Pakistani marble and onyx used in luxury architecture, flooring, and decorative carvings.",
     "color": ["Pure White", "White-Grey", "Green", "Yellow", "Multi"],
-    "available_as": ["Rough Blocks", "Slabs", "Tiles", "Polished Sheets", "Carvings"],
+    "available_as": [
+      "Rough Blocks",
+      "Slabs",
+      "Tiles",
+      "Polished Sheets",
+      "Carvings"
+    ],
     "unit_of_sale": ["Per Metric Ton (MT)", "Per Square Meter (sqm)"],
     "minimum_order": ["1 container (~20 MT)"],
     "export_grades": ["Export Premium", "Standard", "Commercial"],
@@ -438,7 +505,13 @@
       "meta_title": "Pakistan Marble & Onyx Stone",
       "meta_description": "Luxury marble and onyx decorative stones from Pakistan for architecture and interior design."
     },
-    "tags": ["marble", "onyx", "decorative stone", "ziarat marble", "construction stone"],
+    "tags": [
+      "marble",
+      "onyx",
+      "decorative stone",
+      "ziarat marble",
+      "construction stone"
+    ],
     "is_featured": true,
     "status": "active"
   },
@@ -572,7 +645,7 @@
     "category": "Gemstones",
     "subcategory": "Precious Ornamental Stone",
     "image": [
-      "https://res.cloudinary.com/dovzb6w47/image/upload/v1779550052/Nephrite_zaqjro.jpg", 
+      "https://res.cloudinary.com/dovzb6w47/image/upload/v1779550052/Nephrite_zaqjro.jpg",
       "https://res.cloudinary.com/dovzb6w47/image/upload/v1779550052/Nephrite_2_hemids.jpg"
     ],
     "group": "Nephrite",
@@ -580,8 +653,19 @@
       "region": "Mohmand & Bajaur, Khyber Pakhtunkhwa, Pakistan"
     },
     "description": "Commercially active nephrite jade deposits with carving and export potential.",
-    "color": ["Spinach Green", "Celadon", "Creamy White", "Mottled Green-White"],
-    "available_as": ["Rough Boulders", "Slabs", "Polished", "Cabochons", "Carvings"],
+    "color": [
+      "Spinach Green",
+      "Celadon",
+      "Creamy White",
+      "Mottled Green-White"
+    ],
+    "available_as": [
+      "Rough Boulders",
+      "Slabs",
+      "Polished",
+      "Cabochons",
+      "Carvings"
+    ],
     "unit_of_sale": ["Per Kilogram (kg)", "Per Piece"],
     "minimum_order": ["5 kg"],
     "export_grades": ["Imperial", "Commercial", "Carving Grade"],
@@ -610,7 +694,13 @@
     },
     "description": "Rare quartz varieties including diamond quartz and smoky quartz prized by collectors.",
     "color": ["Colorless", "Grey-Black", "Included Varieties"],
-    "available_as": ["Crystal Points", "Clusters", "Specimens", "Rough", "Faceted"],
+    "available_as": [
+      "Crystal Points",
+      "Clusters",
+      "Specimens",
+      "Rough",
+      "Faceted"
+    ],
     "unit_of_sale": ["Per Kilogram (kg)", "Per Piece"],
     "minimum_order": ["500 g"],
     "export_grades": ["Museum", "Collector", "Commercial"],
@@ -723,7 +813,10 @@
     "minimum_order": ["5 kg"],
     "export_grades": ["Premium", "Commercial"],
     "special_note": "Popular for carvings and décor",
-    "seo": { "meta_title": "Pakistan Serpentine Stone", "meta_description": "Decorative serpentine stone from Pakistan." },
+    "seo": {
+      "meta_title": "Pakistan Serpentine Stone",
+      "meta_description": "Decorative serpentine stone from Pakistan."
+    },
     "tags": ["serpentine", "green stone"],
     "is_featured": false,
     "status": "active"
@@ -745,7 +838,10 @@
     "minimum_order": ["5 pieces"],
     "export_grades": ["Collector", "Commercial"],
     "special_note": "Fragile collector mineral",
-    "seo": { "meta_title": "Pakistan Celestite Crystals", "meta_description": "Natural celestite crystal clusters from Pakistan." },
+    "seo": {
+      "meta_title": "Pakistan Celestite Crystals",
+      "meta_description": "Natural celestite crystal clusters from Pakistan."
+    },
     "tags": ["celestite", "blue crystals"],
     "is_featured": false,
     "status": "active"
@@ -767,7 +863,10 @@
     "minimum_order": ["1 kg"],
     "export_grades": ["Collector", "Museum", "Commercial"],
     "special_note": "UV reactive varieties available",
-    "seo": { "meta_title": "Pakistan Fluorite Crystals", "meta_description": "Collector-grade fluorite crystals from Pakistan." },
+    "seo": {
+      "meta_title": "Pakistan Fluorite Crystals",
+      "meta_description": "Collector-grade fluorite crystals from Pakistan."
+    },
     "tags": ["fluorite", "rainbow fluorite"],
     "is_featured": false,
     "status": "active"
@@ -789,7 +888,10 @@
     "minimum_order": ["2 kg"],
     "export_grades": ["Premium", "Commercial"],
     "special_note": "Ideal for decorative lapidary use",
-    "seo": { "meta_title": "Pakistan Chrysocolla & Malachite", "meta_description": "Natural chrysocolla and malachite decorative stones from Pakistan." },
+    "seo": {
+      "meta_title": "Pakistan Chrysocolla & Malachite",
+      "meta_description": "Natural chrysocolla and malachite decorative stones from Pakistan."
+    },
     "tags": ["malachite", "chrysocolla", "copper minerals"],
     "is_featured": false,
     "status": "active"
@@ -813,12 +915,15 @@
     "minimum_order": ["25 MT"],
     "export_grades": ["Industrial", "Chemical Grade"],
     "special_note": "Bulk export available",
-    "seo": { "meta_title": "Pakistan Industrial Rock Salt", "meta_description": "Industrial rock salt exports from Pakistan." },
+    "seo": {
+      "meta_title": "Pakistan Industrial Rock Salt",
+      "meta_description": "Industrial rock salt exports from Pakistan."
+    },
     "tags": ["rock salt", "industrial salt"],
     "is_featured": true,
     "status": "active"
   },
-  
+
   {
     "id": 30,
     "name": "Iron Ore",
@@ -826,9 +931,7 @@
     "slug": "iron-ore",
     "category": "Minerals",
     "subcategory": "Metallic Mineral",
-    "image": [
-      
-    ],
+    "image": [],
     "group": "Ferrous Metal",
     "origin": { "region": "Dilband & Chiniot, Pakistan" },
     "description": "Large iron ore deposits supporting steel and export industries.",
@@ -838,7 +941,10 @@
     "minimum_order": ["500 MT"],
     "export_grades": ["Hematite", "Magnetite", "Limonite"],
     "special_note": "Chiniot reserves exceed 500 million tonnes",
-    "seo": { "meta_title": "Pakistan Iron Ore", "meta_description": "Iron ore resources and exports from Pakistan." },
+    "seo": {
+      "meta_title": "Pakistan Iron Ore",
+      "meta_description": "Iron ore resources and exports from Pakistan."
+    },
     "tags": ["iron ore", "hematite", "magnetite"],
     "is_featured": false,
     "status": "active"
@@ -852,7 +958,9 @@
     "subcategory": "Precious Metal",
     "image": [],
     "group": "Precious Metals",
-    "origin": { "region": "Reko Diq & Saindak, Balochistan; Chitral & Gilgit-Baltistan, Pakistan" },
+    "origin": {
+      "region": "Reko Diq & Saindak, Balochistan; Chitral & Gilgit-Baltistan, Pakistan"
+    },
     "description": "Gold and silver resources from porphyry and alluvial systems.",
     "color": ["Golden Yellow", "Silver White"],
     "available_as": ["Gold Dore", "Silver Dore", "Concentrate"],
@@ -860,7 +968,10 @@
     "minimum_order": ["By negotiation"],
     "export_grades": ["Dore", "Alluvial Fine Gold"],
     "special_note": "Reko Diq contains 40M+ oz gold",
-    "seo": { "meta_title": "Pakistan Gold & Silver", "meta_description": "Gold and silver mining resources from Pakistan." },
+    "seo": {
+      "meta_title": "Pakistan Gold & Silver",
+      "meta_description": "Gold and silver mining resources from Pakistan."
+    },
     "tags": ["gold", "silver", "precious metal"],
     "is_featured": false,
     "status": "active"
@@ -876,7 +987,9 @@
       "https://res.cloudinary.com/dovzb6w47/image/upload/v1779550053/Lead_ore_wbciok.jpg"
     ],
     "group": "Base Metal",
-    "origin": { "region": "Duddar, Lasbela, Balochistan; Surmai, KPK, Pakistan" },
+    "origin": {
+      "region": "Duddar, Lasbela, Balochistan; Surmai, KPK, Pakistan"
+    },
     "description": "Lead-zinc sulphide deposits used in galvanizing, batteries, and chemical industries.",
     "color": ["Grey-Black", "Silver-Grey"],
     "available_as": ["Lead Concentrate", "Zinc Concentrate", "Mixed Pb-Zn Ore"],
@@ -884,7 +997,10 @@
     "minimum_order": ["50 MT concentrate"],
     "export_grades": ["Lead Concentrate", "Zinc Concentrate", "Mixed Ore"],
     "special_note": "Silver credit where applicable",
-    "seo": { "meta_title": "Pakistan Lead-Zinc Ore", "meta_description": "Lead and zinc ore concentrates from Pakistan." },
+    "seo": {
+      "meta_title": "Pakistan Lead-Zinc Ore",
+      "meta_description": "Lead and zinc ore concentrates from Pakistan."
+    },
     "tags": ["lead", "zinc", "base metal"],
     "is_featured": false,
     "status": "active"
@@ -900,7 +1016,9 @@
       "https://res.cloudinary.com/dovzb6w47/image/upload/v1779550057/Manganese_td7ckb.jpg"
     ],
     "group": "Ferroalloy",
-    "origin": { "region": "Lasbela & Khuzdar, Balochistan; Dir, KPK, Pakistan" },
+    "origin": {
+      "region": "Lasbela & Khuzdar, Balochistan; Dir, KPK, Pakistan"
+    },
     "description": "Manganese ore used in steel production, batteries, and chemical manufacturing.",
     "color": ["Black", "Dark Brownish-Black"],
     "available_as": ["Lump Ore", "Fines", "Concentrate"],
@@ -908,7 +1026,10 @@
     "minimum_order": ["50 MT"],
     "export_grades": ["Metallurgical", "Battery Grade", "Low Grade"],
     "special_note": "Mn content typically 25-40%",
-    "seo": { "meta_title": "Pakistan Manganese Ore", "meta_description": "Export-quality manganese ore from Pakistan." },
+    "seo": {
+      "meta_title": "Pakistan Manganese Ore",
+      "meta_description": "Export-quality manganese ore from Pakistan."
+    },
     "tags": ["manganese", "ferroalloy"],
     "is_featured": false,
     "status": "active"
@@ -922,7 +1043,9 @@
     "subcategory": "Industrial Chemical Mineral",
     "image": [],
     "group": "Barium Sulphate",
-    "origin": { "region": "Khuzdar & Lasbela, Balochistan; Hazara, KPK, Pakistan" },
+    "origin": {
+      "region": "Khuzdar & Lasbela, Balochistan; Hazara, KPK, Pakistan"
+    },
     "description": "High-purity barite used in drilling mud, paints, and radiation shielding.",
     "color": ["White", "Off-White", "Grey", "Yellowish"],
     "available_as": ["Lump", "Crushed", "Ground Powder", "API Grade"],
@@ -930,7 +1053,10 @@
     "minimum_order": ["25 MT"],
     "export_grades": ["API Drilling Grade", "Industrial Grade", "Paint Grade"],
     "special_note": "API 13A standard certification available",
-    "seo": { "meta_title": "Pakistan Barite Exports", "meta_description": "Industrial barite exports from Pakistan." },
+    "seo": {
+      "meta_title": "Pakistan Barite Exports",
+      "meta_description": "Industrial barite exports from Pakistan."
+    },
     "tags": ["barite", "barium sulphate"],
     "is_featured": false,
     "status": "active"
@@ -952,7 +1078,10 @@
     "minimum_order": ["25 MT industrial", "5 kg selenite"],
     "export_grades": ["Industrial", "Agricultural", "Ornamental"],
     "special_note": "Selenite variety available",
-    "seo": { "meta_title": "Pakistan Gypsum", "meta_description": "Gypsum and selenite exports from Pakistan." },
+    "seo": {
+      "meta_title": "Pakistan Gypsum",
+      "meta_description": "Gypsum and selenite exports from Pakistan."
+    },
     "tags": ["gypsum", "selenite"],
     "is_featured": false,
     "status": "active"
@@ -968,7 +1097,9 @@
       "https://res.cloudinary.com/dovzb6w47/image/upload/v1779550073/Silica_sand_m09cqa.jpg"
     ],
     "group": "Silica Mineral",
-    "origin": { "region": "Attock & Jhelum, Punjab; Hub, Balochistan; Thatta, Sindh, Pakistan" },
+    "origin": {
+      "region": "Attock & Jhelum, Punjab; Hub, Balochistan; Thatta, Sindh, Pakistan"
+    },
     "description": "High-purity silica sand for glass, foundry, and construction industries.",
     "color": ["White", "Off-White", "Pale Yellow"],
     "available_as": ["Washed Sand", "Graded Sizes", "Silica Powder", "Bulk"],
@@ -976,7 +1107,10 @@
     "minimum_order": ["25 MT"],
     "export_grades": ["Glass Grade", "Foundry Grade", "Construction Grade"],
     "special_note": "Low iron content suitable for fiberglass",
-    "seo": { "meta_title": "Pakistan Silica Sand", "meta_description": "Industrial silica and quartz sand exports from Pakistan." },
+    "seo": {
+      "meta_title": "Pakistan Silica Sand",
+      "meta_description": "Industrial silica and quartz sand exports from Pakistan."
+    },
     "tags": ["silica sand", "quartz sand"],
     "is_featured": false,
     "status": "active"
@@ -1000,7 +1134,10 @@
     "minimum_order": ["25 MT"],
     "export_grades": ["Refined", "Industrial", "Crude"],
     "special_note": "Refining to 99.5% purity available",
-    "seo": { "meta_title": "Pakistan Sulphur", "meta_description": "Industrial sulphur exports from Pakistan." },
+    "seo": {
+      "meta_title": "Pakistan Sulphur",
+      "meta_description": "Industrial sulphur exports from Pakistan."
+    },
     "tags": ["sulphur", "industrial mineral"],
     "is_featured": false,
     "status": "active"
@@ -1014,15 +1151,25 @@
     "subcategory": "Industrial Clay Mineral",
     "image": [],
     "group": "Clay Mineral",
-    "origin": { "region": "Lasbela & Kalat, Balochistan; Mirpur, Azad Kashmir, Pakistan" },
+    "origin": {
+      "region": "Lasbela & Kalat, Balochistan; Mirpur, Azad Kashmir, Pakistan"
+    },
     "description": "Montmorillonite clay for drilling mud, foundry, and waterproofing applications.",
     "color": ["Off-White", "Cream", "Light Grey", "Greenish"],
     "available_as": ["Raw Lump", "Ground Powder", "Activated", "Pellets"],
     "unit_of_sale": ["Per Metric Ton (MT)"],
     "minimum_order": ["25 MT"],
-    "export_grades": ["Drilling Grade", "Pelletizing Grade", "Civil Grade", "Food Grade"],
+    "export_grades": [
+      "Drilling Grade",
+      "Pelletizing Grade",
+      "Civil Grade",
+      "Food Grade"
+    ],
     "special_note": "Sodium and calcium bentonite available",
-    "seo": { "meta_title": "Pakistan Bentonite", "meta_description": "Industrial bentonite clay exports from Pakistan." },
+    "seo": {
+      "meta_title": "Pakistan Bentonite",
+      "meta_description": "Industrial bentonite clay exports from Pakistan."
+    },
     "tags": ["bentonite", "clay mineral"],
     "is_featured": false,
     "status": "active"
@@ -1036,15 +1183,30 @@
     "subcategory": "Industrial Construction Mineral",
     "image": [],
     "group": "Construction Mineral",
-    "origin": { "region": "Hub & Khuzdar, Balochistan; Hattar & Nowshera, KPK; Daud Khel, Punjab, Pakistan" },
+    "origin": {
+      "region": "Hub & Khuzdar, Balochistan; Hattar & Nowshera, KPK; Daud Khel, Punjab, Pakistan"
+    },
     "description": "High-purity limestone and dolomite for cement, steel, and agriculture industries.",
     "color": ["White", "Off-White", "Light Grey", "Buff"],
-    "available_as": ["Crushed Aggregate", "Ground Powder", "Calcined Lime", "Hydrated Lime"],
+    "available_as": [
+      "Crushed Aggregate",
+      "Ground Powder",
+      "Calcined Lime",
+      "Hydrated Lime"
+    ],
     "unit_of_sale": ["Per Metric Ton (MT)"],
     "minimum_order": ["100 MT"],
-    "export_grades": ["Chemical Grade", "Metallurgical Flux", "Agricultural", "Cement Grade"],
+    "export_grades": [
+      "Chemical Grade",
+      "Metallurgical Flux",
+      "Agricultural",
+      "Cement Grade"
+    ],
     "special_note": "CaCO3 purity 90-97%",
-    "seo": { "meta_title": "Pakistan Limestone & Dolomite", "meta_description": "Industrial limestone and dolomite exports from Pakistan." },
+    "seo": {
+      "meta_title": "Pakistan Limestone & Dolomite",
+      "meta_description": "Industrial limestone and dolomite exports from Pakistan."
+    },
     "tags": ["limestone", "dolomite"],
     "is_featured": false,
     "status": "active"
@@ -1066,7 +1228,10 @@
     "minimum_order": ["1 MT industrial", "1 kg specimens"],
     "export_grades": ["Optical Grade", "Industrial GCC", "Collector Specimen"],
     "special_note": "Custom milling available",
-    "seo": { "meta_title": "Pakistan Calcite", "meta_description": "Industrial and collector-grade calcite from Pakistan." },
+    "seo": {
+      "meta_title": "Pakistan Calcite",
+      "meta_description": "Industrial and collector-grade calcite from Pakistan."
+    },
     "tags": ["calcite", "optical crystal"],
     "is_featured": false,
     "status": "active"
@@ -1080,15 +1245,25 @@
     "subcategory": "Industrial Clay",
     "image": [],
     "group": "Refractory Material",
-    "origin": { "region": "Makarwal & Dandot, Punjab; Sor Range, Balochistan; Lakhra, Sindh, Pakistan" },
+    "origin": {
+      "region": "Makarwal & Dandot, Punjab; Sor Range, Balochistan; Lakhra, Sindh, Pakistan"
+    },
     "description": "High-alumina refractory clay for steel furnaces and cement kilns.",
     "color": ["Light Grey", "Buff", "Off-White", "Reddish-Brown"],
-    "available_as": ["Raw Lump", "Calcined", "Ground Powder", "Refractory Bricks"],
+    "available_as": [
+      "Raw Lump",
+      "Calcined",
+      "Ground Powder",
+      "Refractory Bricks"
+    ],
     "unit_of_sale": ["Per Metric Ton (MT)"],
     "minimum_order": ["25 MT"],
     "export_grades": ["High-Duty", "Medium-Duty", "Ceramic Grade"],
     "special_note": "PCE 28-33 Seger",
-    "seo": { "meta_title": "Pakistan Fire Clay", "meta_description": "Refractory fire clay exports from Pakistan." },
+    "seo": {
+      "meta_title": "Pakistan Fire Clay",
+      "meta_description": "Refractory fire clay exports from Pakistan."
+    },
     "tags": ["fire clay", "refractory clay"],
     "is_featured": false,
     "status": "active"
@@ -1112,7 +1287,10 @@
     "minimum_order": ["1 MT"],
     "export_grades": ["Export Washed", "Standard Washed", "Bulk Unsorted"],
     "special_note": "Custom color sorting available",
-    "seo": { "meta_title": "Pakistan River Pebbles", "meta_description": "Decorative river pebbles from Pakistan." },
+    "seo": {
+      "meta_title": "Pakistan River Pebbles",
+      "meta_description": "Decorative river pebbles from Pakistan."
+    },
     "tags": ["river pebbles", "landscape stone"],
     "is_featured": false,
     "status": "active"
@@ -1132,11 +1310,147 @@
     "available_as": ["Coarse", "Medium", "Fine", "Washed & Dried", "Bulk"],
     "unit_of_sale": ["Per Metric Ton (MT)"],
     "minimum_order": ["50 MT"],
-    "export_grades": ["Construction Grade", "Glass Grade", "Foundry Grade", "Filter Grade"],
+    "export_grades": [
+      "Construction Grade",
+      "Glass Grade",
+      "Foundry Grade",
+      "Filter Grade"
+    ],
     "special_note": "ASTM and BS compliant grading",
-    "seo": { "meta_title": "Pakistan Construction Sand", "meta_description": "Construction and industrial sand exports from Pakistan." },
+    "seo": {
+      "meta_title": "Pakistan Construction Sand",
+      "meta_description": "Construction and industrial sand exports from Pakistan."
+    },
     "tags": ["sand", "construction mineral"],
     "is_featured": false,
+    "status": "active"
+  },
+
+  {
+    "id": 44,
+    "name": "Antimony (Stibnite)",
+    "local_name": "Antimony / Stibnite",
+    "slug": "antimony-stibnite",
+    "category": "Metallic Mineral",
+    "subcategory": "Critical Strategic Metal",
+    "image": [],
+    "group": "Antimony Mineral",
+    "origin": {
+      "region": "Qila Abdullah & Kharan, Balochistan; Lutkho & Chitral, KPK, Pakistan"
+    },
+    "description": "Pakistan has significant antimony reserves in Balochistan and KPK, making it a potential major non-Chinese supplier of this critical strategic metal. Antimony is widely used in flame retardants, batteries, semiconductors, defense systems, solar panels, and nuclear shielding. A 50:50 OGDCL–PMDC joint venture was announced in 2025 for commercial development of the Balochistan deposits.",
+    "color": ["Silver-Grey", "Dark Grey", "Black"],
+    "chemical_formula": ["Sb2S3", "Sb"],
+    "available_as": [
+      "Stibnite Ore (Sb2S3)",
+      "Antimony Concentrate",
+      "Crude Antimony Metal"
+    ],
+    "unit_of_sale": ["Per Metric Ton (MT)"],
+    "minimum_order": ["50 MT"],
+    "export_grades": [
+      "Ore (Sb 5–30%)",
+      "Concentrate (Sb 55–60%)",
+      "Metal (Sb 99%+)"
+    ],
+    "hs_code": ["2617.10", "8110.10"],
+    "mohs_hardness": "2.0",
+    "typical_assay": {
+      "ore": "Sb 5–30%",
+      "concentrate": "Sb 55–60%, As <1%, Pb <0.5%"
+    },
+    "fob_port": ["FOB Karachi", "Port Qasim"],
+    "certification": [
+      "SGS",
+      "Intertek chemical assay per shipment",
+      "Certificate of Analysis (CoA) available"
+    ],
+    "special_note": "Newly significant deposit following the 2025 OGDCL–PMDC joint venture announcement. Critical for defense, semiconductor, flame-retardant, and energy storage sectors. Export is subject to Pakistan Mines Act and Strategic Minerals regulations. Buyers must provide an end-use declaration for defense-application grades.",
+    "seo": {
+      "meta_title": "Pakistan Antimony (Stibnite) Resources",
+      "meta_description": "Strategic antimony reserves from Balochistan and KPK, Pakistan, available as ore, concentrate, and refined metal."
+    },
+    "tags": [
+      "antimony",
+      "stibnite",
+      "critical mineral",
+      "strategic metal",
+      "metallic mineral"
+    ],
+    "is_featured": true,
+    "status": "active"
+  },
+
+  {
+    "id": 45,
+    "name": "Mica",
+    "local_name": "Mica",
+    "slug": "mica",
+    "category": "Industrial Non-Metallic Mineral",
+    "subcategory": "Collector Specimen (Lepidolite)",
+    "image": [],
+    "group": "Sheet Silicate Mineral",
+    "origin": {
+      "region": "FATA / Tribal Districts, KPK; Skardu, Gilgit-Baltistan; Khuzdar, Balochistan, Pakistan"
+    },
+    "description": "Pakistan hosts commercially significant mica deposits across its northern and western highlands. Muscovite is the dominant variety, valued for its dielectric strength, heat resistance, and optical clarity. Phlogopite serves high-temperature industrial applications, while lithium-bearing Lepidolite from Gilgit-Baltistan is increasingly sought after as a lithium source for battery technology. Pakistani mica is exported as split books, flakes, powder, and reconstituted sheets for electronics, cosmetics, paints, rubber, and insulation industries worldwide.",
+    "color": ["Colorless", "Silver", "Brown", "Amber", "Violet", "Pink"],
+    "varieties": ["Muscovite", "Phlogopite", "Lepidolite"],
+    "chemical_formula": ["KAl2(AlSi3O10)(OH)2", "Lepidolite (Li-bearing mica)"],
+    "available_as": [
+      "Split Books",
+      "Mica Flakes",
+      "Ground Powder (80–325 mesh)",
+      "Reconstituted Mica Sheets",
+      "Lepidolite Specimens"
+    ],
+    "unit_of_sale": [
+      "Per Metric Ton (MT) - Industrial",
+      "Per Kilogram (kg) - Specimens"
+    ],
+    "minimum_order": [
+      "1 MT Industrial Powder",
+      "5 kg Split Books",
+      "500 g Specimens"
+    ],
+    "export_grades": [
+      "Electronics Grade (High Purity)",
+      "Industrial Grade",
+      "Cosmetic Grade (Pearlescent)",
+      "Collector Specimen"
+    ],
+    "hs_code": ["2526.10", "2526.20"],
+    "mohs_hardness": "2.0 - 3.0",
+    "key_properties": {
+      "dielectric_strength": "100–200 kV/mm",
+      "thermal_stability": [
+        "Up to 600°C (Muscovite)",
+        "Up to 1000°C (Phlogopite)"
+      ],
+      "silica_content": "45–55%"
+    },
+    "fob_port": ["FOB Karachi", "Port Qasim"],
+    "certification": [
+      "SGS Chemical Analysis",
+      "Certificate of Analysis (CoA) per lot",
+      "RoHS Compliance for Electronics Grade"
+    ],
+    "special_note": "Lepidolite (Li-bearing mica) is increasingly sought after as a lithium source for battery-grade processing, making it attractive for EV and energy storage industries. Cosmetic-grade ground muscovite (wet-ground, surface-treated) is available for pearlescent pigment applications. Custom mesh sizes, packaging options, and processing specifications are available upon request.",
+    "seo": {
+      "meta_title": "Pakistan Mica Deposits | Muscovite, Phlogopite & Lepidolite",
+      "meta_description": "High-quality Pakistani mica available as muscovite, phlogopite, and lepidolite for electronics, cosmetics, insulation, industrial, and battery applications."
+    },
+    "tags": [
+      "mica",
+      "muscovite",
+      "phlogopite",
+      "lepidolite",
+      "lithium mica",
+      "industrial mineral",
+      "electronics grade mica",
+      "cosmetic grade mica"
+    ],
+    "is_featured": true,
     "status": "active"
   }
 ]
