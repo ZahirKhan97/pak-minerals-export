@@ -4,6 +4,16 @@ import { getProductBySlug } from "@/lib/products";
 import { FaCheckCircle, FaTags, FaWhatsapp } from "react-icons/fa";
 import { WEBSITE_LISTING } from "@/routes/WebsiteRoute";
 
+/* ================= SEO (METADATA) ================= */
+export const metadata = {
+  title: "Product",
+  description: "Product details page",
+  keywords: [
+    "minerals",
+    "gemstones",
+  ]
+};
+
 const ProductDetailPage = async ({ params }) => {
   const resolvedParams = await params;
   const slug = resolvedParams.slug;
@@ -17,6 +27,10 @@ const ProductDetailPage = async ({ params }) => {
       </div>
     );
   }
+
+  metadata.title = product?.seo?.meta_title || product?.name,
+  metadata.description = product?.seo?.meta_description || product?.description,
+  metadata.keywords = [product?.name, product.category, ...product.tags];
 
   return (
     <section className="min-h-screen bg-[#f4fff6] py-6 lg:py-8">

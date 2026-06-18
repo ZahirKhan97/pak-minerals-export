@@ -17,15 +17,15 @@ import {
 const ProductsListClient = () => {
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]);
-
+  
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [sortBy, setSortBy] = useState("all");
-
+  
   const [isFilterOpen, setIsFilterOpen] = useState(false);
   const [isSortOpen, setIsSortOpen] = useState(false);
-
+  
   const [loading, setLoading] = useState(true);
-
+  
   const router = useRouter();
   const searchParams = useSearchParams();
 

@@ -5,8 +5,12 @@ import { cn } from "@/lib/utils";
 const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 export const metadata = {
-  title: "Export Minerals",
-  description: "Premium minerals, salts, and gems exported directly from Pakistan. Explore our high-quality products for global buyers.",
+  title: {
+    default: "Export Minerals",
+    template: "%s | Export Minerals",
+  },
+  description:
+    "Premium minerals, salts, and gems exported from Pakistan.",
 };
 
 export default function RootLayout({ children }) {
