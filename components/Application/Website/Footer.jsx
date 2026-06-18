@@ -20,7 +20,7 @@ const Footer = async () => {
           {/* Company Info */}
           <div>
             <h2 className="text-2xl font-bold mb-4 uppercase">
-              Pak Minerals Export
+              Export Minerals
             </h2>
 
             <p className="text-green-100 leading-7">
@@ -84,7 +84,7 @@ const Footer = async () => {
 
               <div className="flex items-center gap-2">
                 <IoMailOutline size={22} />
-                <p>info@minerals.com</p>
+                <p>sales@exportminerals.com</p>
               </div>
               
               <div className="flex items-center gap-2">
@@ -101,7 +101,7 @@ const Footer = async () => {
         <div className="max-w-7xl mx-auto px-4 py-5 flex flex-col md:flex-row items-center justify-between gap-3">
           
           <p className="text-sm text-green-200">
-            © 2026 Pak Minerals Export. All Rights Reserved.
+            © 2026 Export Minerals. All Rights Reserved.
           </p>
 
           <div className="flex items-center gap-5 text-sm">

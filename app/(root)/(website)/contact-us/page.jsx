@@ -33,7 +33,7 @@ export default function ContactUs() {
         <div className="grid grid-cols-4 lg:grid-cols-4 gap-4 lg:gap-6 mb-12">
           {/* Email */}
           <a
-            href="mailto:info@minerals.com"
+            href="mailto:sales@exportminerals.com"
             className="bg-white rounded-3xl p-4 lg:p-6 border border-gray-100 shadow-sm hover:shadow-md transition text-center lg:text-left"
           >
             <FaEnvelope className="text-3xl text-green-700 mx-auto lg:mx-0 lg:mb-4" />
@@ -42,7 +42,7 @@ export default function ContactUs() {
               <h3 className="font-bold text-lg text-gray-800 mb-2">Email</h3>
 
               <p className="text-gray-600 text-sm break-all">
-                info@minerals.com
+                sales@exportminerals.com
               </p>
             </div>
           </a>
