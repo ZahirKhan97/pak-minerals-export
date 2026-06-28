@@ -6,6 +6,7 @@ import {
   FaClock,
   FaGlobe,
   FaMapMarkerAlt,
+  FaTiktok 
 } from "react-icons/fa";
 
 export default function ContactUs() {
@@ -30,7 +31,7 @@ export default function ContactUs() {
         </div>
 
         {/* Contact Methods */}
-        <div className="grid grid-cols-4 lg:grid-cols-4 gap-4 lg:gap-6 mb-12">
+        <div className="grid grid-cols-5 lg:grid-cols-5 gap-4 lg:gap-6 mb-12">
           {/* Email */}
           <a
             href="mailto:sales@exportminerals.com"
@@ -79,6 +80,23 @@ export default function ContactUs() {
             </div>
           </a>
 
+          {/* Tiktok */}
+
+          <a
+            href="https://www.tiktok.com/@www.exportminerals.com?_r=1&_t=ZS-97NJb3bIJhh"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-white rounded-3xl p-4 lg:p-6 border border-gray-100 shadow-sm hover:shadow-md transition text-center lg:text-left"
+          >
+            <FaTiktok  className="text-3xl text-green-700 mx-auto lg:mx-0 lg:mb-4" />
+
+            <div className="hidden lg:block">
+              <h3 className="font-bold text-lg text-gray-800 mb-2">TikTok</h3>
+
+              <p className="text-gray-600 text-sm">Follow us for product videos & updates</p>
+            </div>
+          </a>
+
           {/* Instagram */}
           <a
             href="https://instagram.com"
@@ -114,9 +132,9 @@ export default function ContactUs() {
                 </h3>
 
                 <p className="text-gray-600">
-                  Your Office Address Here
+                  Office No. 8, 1st Floor Laraib Center G-9 Markaz
                   <br />
-                  City, Country
+                  Islamabad, Pakistan
                 </p>
               </div>
             </div>
