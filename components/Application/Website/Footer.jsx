@@ -1,10 +1,15 @@
-import { WEBSITE_CATEGORY, WEBSITE_CONTACT_US, WEBSITE_HOME, WEBSITE_PRIVACY_POLICY, WEBSITE_TERMS_AND_CONDITIONS } from '@/routes/WebsiteRoute';
-import Link from 'next/link';
-import React from 'react'
+import {
+  WEBSITE_CATEGORY,
+  WEBSITE_CONTACT_US,
+  WEBSITE_HOME,
+  WEBSITE_PRIVACY_POLICY,
+  WEBSITE_TERMS_AND_CONDITIONS,
+} from "@/routes/WebsiteRoute";
+import Link from "next/link";
+import React from "react";
 import { FaWhatsapp } from "react-icons/fa";
 import { IoLocationOutline, IoMailOutline } from "react-icons/io5";
-import { getCategories } from '@/lib/categories'
-
+import { getCategories } from "@/lib/categories";
 
 const Footer = async () => {
   const categoriesData = await getCategories();
@@ -12,11 +17,8 @@ const Footer = async () => {
 
   return (
     <footer className="bg-green-900 text-white mt-20">
-      
       <div className="max-w-7xl mx-auto px-4 py-14">
-        
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-          
           {/* Company Info */}
           <div>
             <h2 className="text-2xl font-bold mb-4 uppercase">
@@ -24,17 +26,14 @@ const Footer = async () => {
             </h2>
 
             <p className="text-green-100 leading-7">
-              Premium quality minerals and gemstones
-              exported directly from Pakistan to
-              international buyers.
+              Premium quality minerals and gemstones exported directly from
+              Pakistan to international buyers.
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-xl font-semibold mb-4">
-              Quick Links
-            </h3>
+            <h3 className="text-xl font-semibold mb-4">Quick Links</h3>
 
             <ul className="space-y-3">
               <li>
@@ -46,18 +45,16 @@ const Footer = async () => {
                 </Link>
               </li>
 
-              {
-                categories.map((category) => (
-                  <li key={category._id}>
-                    <Link
-                      href={WEBSITE_CATEGORY(category.slug)}
-                      className="hover:text-green-300 transition"
-                    >
-                      {category.name}
-                    </Link>
-                  </li>
-                ))
-              }
+              {categories.map((category) => (
+                <li key={category._id}>
+                  <Link
+                    href={WEBSITE_CATEGORY(category.slug)}
+                    className="hover:text-green-300 transition"
+                  >
+                    {category.name}
+                  </Link>
+                </li>
+              ))}
 
               <li>
                 <Link
@@ -72,9 +69,7 @@ const Footer = async () => {
 
           {/* Contact */}
           <div>
-            <h3 className="text-xl font-semibold mb-4">
-              Contact Info
-            </h3>
+            <h3 className="text-xl font-semibold mb-4">Contact Info</h3>
 
             <div className="space-y-3 text-green-100">
               <div className="flex items-center gap-2">
@@ -86,10 +81,14 @@ const Footer = async () => {
                 <IoMailOutline size={22} />
                 <p>sales@exportminerals.com</p>
               </div>
-              
-              <div className="flex items-center gap-2">
-                <IoLocationOutline size={22} />
-                <p>Pakistan</p>
+
+              <div className="flex items-start gap-3">
+                <IoLocationOutline size={22} className="mt-1 flex-shrink-0" />
+
+                <p>
+                  Office No. 8, 1st Floor Laraib Center, G-9 Markaz, Islamabad,
+                  Pakistan
+                </p>
               </div>
             </div>
           </div>
@@ -99,7 +98,6 @@ const Footer = async () => {
       {/* Bottom */}
       <div className="border-t border-green-800">
         <div className="max-w-7xl mx-auto px-4 py-5 flex flex-col md:flex-row items-center justify-between gap-3">
-          
           <p className="text-sm text-green-200">
             © 2026 Export Minerals. All Rights Reserved.
           </p>
@@ -123,6 +121,6 @@ const Footer = async () => {
       </div>
     </footer>
   );
-}
+};
 
-export default Footer
+export default Footer;
